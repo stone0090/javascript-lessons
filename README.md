@@ -6,7 +6,7 @@
 
 2015年公司内训，请来 [大胡子](http://weibo.com/zhihuijiang) 为我们讲解 [JS Dota](http://ibagsoft.github.io/js_dota/) 课程，让我对 JavaScript 有了全新的认识，讲师一步步引导大家手写 jQuery、Backbone 等 JavaScript 主流框架，更是让我对 JavaScript 产生了浓厚的兴趣。
 
-俗话说「教是最好的学」，[stone](http://shijiajie.com/about/) 是公司的兼职教员，校招同事即将入职，正好借此机会把 JavaScript 学习心得进行归纳整理，组织成培训课程与大家分享。
+俗话说「教是最好的学」，[stone](http://shijiajie.com/about/) 是公司的兼职教员，校招同事即将入职，正好借此机会把 JavaScript 学习心得进行归纳整理，组织成培训课程分享给大家，这个过程中不仅巩固了自己也帮助了大家。
 
 本课程通过提供更多的实战机会，精心安排的章节目标，让大家可以循序渐进地、有目的地、有挑战地开展学习，并运灵活用到工作中。
 
@@ -42,7 +42,7 @@
 - 作用域
 - 回调
 
-### 高级：JavaScript的「精华」和「糟粕」
+### 高级：JavaScript「精华」和「糟粕」
 - DOM2和DOM3
 - 面向对象程序设计
 - 全局变量污染
