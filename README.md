@@ -20,7 +20,7 @@
 本课程分为四个部分：初级、中级、高级、实战。
 
 ### 初级：JavaScript语言核心
-- JavaScript简介
+- [JavaScript简介](/1.0-Introduction.md)
 - 词法结构
 - 类型、值和变量
 - 表达式和运算符
