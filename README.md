@@ -20,8 +20,9 @@
 本课程分为四个部分：初级、中级、高级、实战。
 
 ### 初级：JavaScript语言核心
-- [JavaScript简介](/1.0-Introduction.md)
-- 词法结构
+- [JavaScript 简介](/1.1-Introduction.md)
+- [JavaScript 初探](/1.2-)
+- 语法
 - 类型、值和变量
 - 表达式和运算符
 - 语句
@@ -57,4 +58,13 @@
 - [网站性能优化](http://www.imooc.com/view/50)
 
 ## 勘误
+
+如果您在学习本课程时发现错误，请用这个地址提交给我：
+
+> https://github.com/stone0090/javascript-lessons/issues
+
+如果您想提问关于本课程的技术问题，请用这个邮箱与我联系：
+
+> stone0090@hotmail.com
+
 ## 致谢
