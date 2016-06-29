@@ -32,7 +32,6 @@
 - 类和模块
 - 正则表达式的模式匹配
 - JavaScript的子集和扩展
-- 课堂练习
 
 ### 中级：客户端JavaScript
 - Web浏览器中的JavaScript
