@@ -21,9 +21,9 @@
 
 ### 初级：JavaScript语言核心
 - [JavaScript 简介](/1.1-Introduction.md)
-- [JavaScript 初探](/1.2-)
-- 语法
-- 类型、值和变量
+- [JavaScript 初探](/1.2-FirstExploration.md)
+- [语法](/1.3-Syntax.md)
+- 变量和数据类型
 - 表达式和运算符
 - 语句
 - 对象
@@ -67,5 +67,3 @@
 如果您想提问关于本课程的技术问题，请用这个邮箱与我联系：
 
 > stone0090@hotmail.com
-
-## 致谢
