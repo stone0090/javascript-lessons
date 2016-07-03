@@ -15,13 +15,13 @@
 严格的说，JavaScript 不是面向对象的编程语言，而是「基于对象」的编程语言。JavaScript 面向对象的思想和实现比较晦涩，如果没有「正统」面向对象的编程经验，想深入学习 JavaScript 是比较难的，如果你认为学过 C 语言再来学 JavaScript 会非常容易，那你将会很失望。所以 [stone](http://shijiajie.com/about/) 建议，在深入学习 JavaScript 之前，最好有 C++、C#、Java、PHP 等「正统」面向对象的编程语言的基础。
 
 ## 课程结构及目录
-> 以下内容只是初步构想，**课程结构及目录** 会根据大家的实际需求进行调整。
+> 以下内容只是初步构想，**课程结构及目录** 会根据实际情况进行调整。
 
 本课程分为四个部分：初级、中级、高级、实战。
 
-### 初级：JavaScript语言核心
-- [JavaScript 简介](/1.1-Introduction.md)
-- [JavaScript 初探](/1.2-FirstExploration.md)
+### 初级：JavaScript 语言核心
+- [JavaScript 简介](/1.1-Introduction.md)（已完成）
+- [JavaScript 初探](/1.2-FirstExploration.md)（已完成）
 - [语法](/1.3-Syntax.md)
 - 变量和数据类型
 - 表达式和运算符
@@ -33,8 +33,8 @@
 - 正则表达式的模式匹配
 - JavaScript的子集和扩展
 
-### 中级：客户端JavaScript
-- Web浏览器中的JavaScript
+### 中级：客户端 JavaScript
+- Web浏览器中的 JavaScript
 - BOM
 - DOM
 - 事件
@@ -50,7 +50,7 @@
 - 模块
 - 异常处理
 
-### 实战：JavaScript最佳实践
+### 实战：JavaScript 最佳实践
 - 过场动画效果
 - 俄罗斯方块游戏
 - 手写jQuery
@@ -58,12 +58,10 @@
 - 全屏滚动插件
 - [网站性能优化](http://www.imooc.com/view/50)
 
-## 勘误
+## 勘误及提问
 
-如果您在学习本课程时发现错误，请用这个地址提交给我：
+如果您在学习本课程时发现错误，或者想提关于本课程的技术问题，请在微信公众号「石佳劼的博客」中给我留言：
 
-> https://github.com/stone0090/javascript-lessons/issues
+![](http://7xkhp9.com1.z0.glb.clouddn.com/weixin/qrcode_for_gh_48ef95800cf5_258.jpg?imageView2/2/w/200/interlace/1/q/100)
 
-如果您想提问关于本课程的技术问题，请用这个邮箱与我联系：
 
-> stone0090@hotmail.com
