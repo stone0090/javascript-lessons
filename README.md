@@ -60,8 +60,9 @@
 
 ## 勘误及提问
 
-如果您在学习本课程时发现错误，或者想提关于本课程的技术问题，请在微信公众号「石佳劼的博客」中给我留言：
+如果您在学习本课程时发现错误，或者想提关于本课程的技术问题，可以通过以下方式联系我，或在微信公众号「石佳劼的博客」中给我留言。
+
+> 邮箱：stone0090@hotmail.com
+> GitHub：https://github.com/stone0090/javascript-lessons/issues
 
 ![](http://7xkhp9.com1.z0.glb.clouddn.com/weixin/qrcode_for_gh_48ef95800cf5_258.jpg?imageView2/2/w/200/interlace/1/q/100)
-
-
