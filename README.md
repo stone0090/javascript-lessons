@@ -22,8 +22,8 @@
 ### 初级：JavaScript 语言核心
 - [JavaScript 简介](/1.1-Introduction.md)（已完成）
 - [JavaScript 初探](/1.2-FirstExploration.md)（已完成）
-- [语法](/1.3-Syntax.md)
-- 变量和数据类型
+- [语法](/1.3-Syntax.md)（已完成）
+- [变量和数据类型](/1.4-Variable&Types.md)（已完成）
 - 表达式和运算符
 - 语句
 - 对象
@@ -60,9 +60,13 @@
 
 ## 勘误及提问
 
+如需了解课程最新动态，可 Star 以下 GitHub 项目。
+
+> https://github.com/stone0090/javascript-lessons
+
 如果您在学习本课程时发现错误，或者想提关于本课程的技术问题，可以通过以下方式联系我，或在微信公众号「石佳劼的博客」中给我留言。
 
-> 邮箱：stone0090@hotmail.com
-> GitHub：https://github.com/stone0090/javascript-lessons/issues
+> Blog：http://shijiajie.com/about
+> Email：stone0090@hotmail.com
 
-![](http://7xkhp9.com1.z0.glb.clouddn.com/weixin/qrcode_for_gh_48ef95800cf5_258.jpg?imageView2/2/w/200/interlace/1/q/100)
+![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/other/blog_statement_20160618_01.png?imageView2/2/w/650/interlace/1/q/100)
