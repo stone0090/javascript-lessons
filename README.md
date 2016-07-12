@@ -1,26 +1,24 @@
-# 《JavaScript 闯关记》-- by stone
+# 《JavaScript 闯关记》-- by [stone](http://shijiajie.com/about/) 
 
 ## 为何写作此课程
 
+2015年，公司请来 [大胡子姜志辉](http://weibo.com/zhihuijiang) 为我们培训 [JS Dota](http://ibagsoft.github.io/js_dota/) 课程，让我对 JavaScript 有了全新的认识，[大胡子](http://weibo.com/zhihuijiang) 一步步引导我们手写 jQuery、Backbone 等 JavaScript 主流框架，更是激发了我对 JavaScript 浓厚的兴趣。
 
+在工作中，我主要负责开发基于 Web 的企业内部管理系统，虽然能够熟练地使用 JavaScript，但经过此次培训才发现，自己所了解的 JavaScript 只是冰山一角。
 
-2015年，公司请来 [大胡子姜志辉](http://weibo.com/zhihuijiang) 为我们培训 [JS Dota](http://ibagsoft.github.io/js_dota/) 课程，让我对 JavaScript 有了全新的认识，讲师一步步引导大家手写 jQuery、Backbone 等 JavaScript 主流框架，更是激发了我对 JavaScript 浓厚的兴趣。
+俗话说「教是最好的学」，我是公司的兼职教员，校招同事入职在即，正好借此机会梳理自己 JavaScript 知识体系，深究 JavaScript 每个知识点，整理成培训课程分享给大家。
 
-[stone](http://shijiajie.com/about/) 主要负责基于 Web 的企业内部管理系统的开发，虽然能够熟练使用 JavaScript，但经过此次培训之后才发现自己所了解的 JavaScript 只是冰山一角。
-
-俗话说「教是最好的学」，[stone](http://shijiajie.com/about/) 是公司的兼职教员，校招同事即将入职，正好借此机会系统性的学习 JavaScript，深究 JavaScript 每一个难点，把学习心得归纳整理成培训课程分享给大家。
-
-本课程之所以叫做《JavaScript 闯关记》，是想提供更多的实战机会，精心安排章节目标，让大家可以循序渐进地、有目的地、有挑战地开展学习，掌握 JavaScript 每一个知识点，并运灵活用到工作中。
+本课程之所以叫做《JavaScript 闯关记》，是想提供更多的实战机会，让大家可以循序渐进地、有目的地、有挑战地开展学习，并运灵活用到工作中。
 
 ## 课程结构及目录
-> 以下目录只是初步构想，课程结构及内容会根据实际情况进行调整。
+> 以下目录只是初步构想，课程结构及内容会根据实际情况随时进行调整。
 
 ### 初级：JavaScript 语言核心
-- [JavaScript 简介](/1.1-Introduction.md)（已完成）
-- [JavaScript 初探](/1.2-FirstExploration.md)（已完成）
+- [简介](/1.1-Introduction.md)（已完成）
+- [初探](/1.2-FirstExploration.md)（已完成）
 - [语法](/1.3-Syntax.md)（已完成）
 - [变量和数据类型](/1.4-Variable&Types.md)（已完成）
-- 表达式和运算符
+- [运算符](/1.5-Operators.md)（编写中）
 - 语句
 - 对象
 - 数组
