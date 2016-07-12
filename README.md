@@ -1,18 +1,16 @@
-# 《JavaScript闯关记》-- by stone
+# 《JavaScript 闯关记》-- by stone
 
 ## 为何写作此课程
 
-[stone](http://shijiajie.com/about/) 主要负责基于 Web 的企业内部管理系统的开发，虽然工作中时常用到 JavaScript，但了解程度并不深。
 
-2015年公司内训，请来 [大胡子](http://weibo.com/zhihuijiang) 为我们讲解 [JS Dota](http://ibagsoft.github.io/js_dota/) 课程，让我对 JavaScript 有了全新的认识，讲师一步步引导大家手写 jQuery、Backbone 等 JavaScript 主流框架，更是让我对 JavaScript 产生了浓厚的兴趣。
 
-俗话说「教是最好的学」，[stone](http://shijiajie.com/about/) 是公司的兼职教员，校招同事即将入职，正好借此机会把 JavaScript 学习心得进行归纳整理，组织成培训课程分享给大家，这个过程中不仅巩固了自己也帮助了大家。
+2015年，公司请来 [大胡子姜志辉](http://weibo.com/zhihuijiang) 为我们培训 [JS Dota](http://ibagsoft.github.io/js_dota/) 课程，让我对 JavaScript 有了全新的认识，讲师一步步引导大家手写 jQuery、Backbone 等 JavaScript 主流框架，更是激发了我对 JavaScript 浓厚的兴趣。
 
-本课程通过提供更多的实战机会，精心安排的章节目标，让大家可以循序渐进地、有目的地、有挑战地开展学习，并运灵活用到工作中。
+[stone](http://shijiajie.com/about/) 主要负责基于 Web 的企业内部管理系统的开发，虽然能够熟练使用 JavaScript，但经过此次培训之后才发现自己所了解的 JavaScript 只是冰山一角。
 
-## 对初学者的建议
+俗话说「教是最好的学」，[stone](http://shijiajie.com/about/) 是公司的兼职教员，校招同事即将入职，正好借此机会系统性的学习 JavaScript，深究 JavaScript 每一个难点，把学习心得归纳整理成培训课程分享给大家。
 
-严格的说，JavaScript 不是面向对象的编程语言，而是「基于对象」的编程语言。JavaScript 面向对象的思想和实现比较晦涩，如果没有「正统」面向对象的编程经验，想深入学习 JavaScript 是比较难的，如果你认为学过 C 语言再来学 JavaScript 会非常容易，那你将会很失望。所以 [stone](http://shijiajie.com/about/) 建议，在深入学习 JavaScript 之前，最好有 C++、C#、Java、PHP 等「正统」面向对象的编程语言的基础。
+本课程之所以叫做《JavaScript 闯关记》，是想提供更多的实战机会，精心安排章节目标，让大家可以循序渐进地、有目的地、有挑战地开展学习，掌握 JavaScript 每一个知识点，并运灵活用到工作中。
 
 ## 课程结构及目录
 > 以下目录只是初步构想，课程结构及内容会根据实际情况进行调整。
