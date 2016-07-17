@@ -6,7 +6,7 @@
 
 2015年，公司请来 [大胡子姜志辉](http://weibo.com/zhihuijiang) 为我们培训 [JS Dota](http://ibagsoft.github.io/js_dota/) 课程，让我对 JavaScript 有了全新的认识，他一步步引导我们手写 jQuery、Backbone 等 JavaScript 主流框架，更是激发了我对 JavaScript 浓厚的兴趣。
 
-俗话说「教是最好的学」，我是公司的兼职教员，正好借此机会梳理自己 JavaScript 知识体系，深入研究每个知识点，并整理成培训课程分享给大家。
+俗话说「教是最好的学」，我是公司的兼职教员，正好借此机会梳理自己 JavaScript 知识体系，深入研究每个知识点，整理成培训课程分享给大家。
 
 本课程之所以叫做《JavaScript 闯关记》，是因为每个章节都精心设计了挑战关卡，通过提供更多的实战机会，让大家可以循序渐进地、有目的地、有挑战地开展学习，并运灵活用到工作中。
 
@@ -18,7 +18,7 @@
 - [初探](/1.2-FirstExploration.md)（已完成）
 - [语法](/1.3-Syntax.md)（已完成）
 - [变量和数据类型](/1.4-Variable&Types.md)（已完成）
-- [运算符](/1.5-Operators.md)（编写中）
+- [表达式和运算符](/1.5-Expression&Operators.md)（已完成）
 - 语句
 - 对象
 - 数组
@@ -54,7 +54,7 @@
 
 ## 勘误及提问
 
-如需了解课程最新动态，可 Star 以下 GitHub 项目。
+如需了解课程最新动态，可在 GitHub Star 该项目。
 
 > https://github.com/stone0090/javascript-lessons
 
