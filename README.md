@@ -54,13 +54,12 @@
 
 ## 勘误及提问
 
-如需了解课程最新动态，可在 GitHub Star 该项目。
-
-> https://github.com/stone0090/javascript-lessons
-
 如果您在学习本课程时发现错误，或者想提关于本课程的技术问题，可以通过以下方式联系我，或在微信公众号「石佳劼的博客」中给我留言。
 
 > Blog：http://shijiajie.com/about  
 > Email：stone0090@hotmail.com
+
+> 如需了解课程最新动态，可在 GitHub Star 该项目。  
+> https://github.com/stone0090/javascript-lessons
 
 ![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/other/blog_statement_20160618_01.png?imageView2/2/w/650/interlace/1/q/100)
