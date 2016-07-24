@@ -59,7 +59,8 @@
 > Blog：http://shijiajie.com/about  
 > Email：stone0090@hotmail.com
 
-> 如需了解课程最新动态，可在 GitHub Star 该项目。  
+如需了解课程最新动态，可在 GitHub Star 该项目。
+
 > https://github.com/stone0090/javascript-lessons
 
 ![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/other/blog_statement_20160618_01.png?imageView2/2/w/650/interlace/1/q/100)
