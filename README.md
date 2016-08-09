@@ -20,12 +20,12 @@
 - [变量和数据类型](https://github.com/stone0090/javascript-lessons/blob/master/1.4-Variable&Types.md)（已完成）
 - [表达式和运算符](https://github.com/stone0090/javascript-lessons/blob/master/1.5-Expression&Operators.md)（已完成）
 - [语句](https://github.com/stone0090/javascript-lessons/blob/master/1.6-Statements.md)（已完成）
-- 对象（编写中）
-- 数组
-- 函数
+- `Object` 对象（编写中）
+- `Array` 对象
+- `Function` 对象
+- `RegExp` 对象
+- 其他对象
 - 类和模块
-- 正则表达式的模式匹配
-- JavaScript的子集和扩展
 
 ### 中级：客户端 JavaScript
 - Web浏览器中的 JavaScript
