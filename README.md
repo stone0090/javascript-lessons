@@ -20,12 +20,11 @@
 - [变量和数据类型](https://github.com/stone0090/javascript-lessons/blob/master/1.4-Variable&Types.md)（已完成）
 - [表达式和运算符](https://github.com/stone0090/javascript-lessons/blob/master/1.5-Expression&Operators.md)（已完成）
 - [语句](https://github.com/stone0090/javascript-lessons/blob/master/1.6-Statements.md)（已完成）
-- `Object` 对象（编写中）
-- `Array` 对象
-- `Function` 对象
-- `RegExp` 对象
-- 其他对象
-- 类和模块
+- [对象](https://github.com/stone0090/javascript-lessons/blob/master/1.7-ObjectObjects.md)（已完成）
+- 数组（编写中）
+- 函数
+- 正则
+- 其他内置对象
 
 ### 中级：客户端 JavaScript
 - Web浏览器中的 JavaScript
@@ -36,6 +35,8 @@
 - 作用域
 - 回调
 - 继承
+- 类和模块
+- this
 
 ### 高级：JavaScript「精华」和「糟粕」
 - DOM2和DOM3
