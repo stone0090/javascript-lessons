@@ -14,7 +14,7 @@
 > 以下目录只是初步构想，课程结构及内容会根据实际情况随时进行调整。
 
 ### 初级：JavaScript 语言核心
-- [简介](http://shijiajie.com/2016/07/24/javascript-lesson-1.1-Introduction/)（已完成）
+- [简介](https://github.com/stone0090/javascript-lessons/blob/master/1.1-Introduction.md)（已完成）
 - [初探](https://github.com/stone0090/javascript-lessons/blob/master/1.2-FirstExploration.md)（已完成）
 - [语法](https://github.com/stone0090/javascript-lessons/blob/master/1.3-Syntax.md)（已完成）
 - [变量和数据类型](https://github.com/stone0090/javascript-lessons/blob/master/1.4-Variable&Types.md)（已完成）
