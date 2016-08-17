@@ -8,20 +8,20 @@
 
 俗话说「教是最好的学」，我是公司的兼职教员，正好借此机会梳理自己 JavaScript 知识体系，深入研究每个知识点，整理成培训课程分享给大家。
 
-本课程之所以叫做《JavaScript 闯关记》，是因为每个章节都精心设计了挑战关卡，通过提供更多的实战机会，让大家可以循序渐进地、有目的地、有挑战地开展学习，并运灵活用到工作中。
+本课程之所以叫做《JavaScript 闯关记》，是因为每个章节都精心设计了挑战关卡，通过提供更多的实战机会，让大家可以循序渐进地、有目的地、有挑战地开展学习。
 
 ## 课程结构及目录
 > 以下目录只是初步构想，课程结构及内容会根据实际情况随时进行调整。
 
 ### 初级：JavaScript 语言核心
-- [简介](https://github.com/stone0090/javascript-lessons/blob/master/1.1-Introduction.md)（已完成）
-- [初探](https://github.com/stone0090/javascript-lessons/blob/master/1.2-FirstExploration.md)（已完成）
-- [语法](https://github.com/stone0090/javascript-lessons/blob/master/1.3-Syntax.md)（已完成）
-- [变量和数据类型](https://github.com/stone0090/javascript-lessons/blob/master/1.4-Variable&Types.md)（已完成）
-- [表达式和运算符](https://github.com/stone0090/javascript-lessons/blob/master/1.5-Expression&Operators.md)（已完成）
-- [语句](https://github.com/stone0090/javascript-lessons/blob/master/1.6-Statements.md)（已完成）
-- [对象](https://github.com/stone0090/javascript-lessons/blob/master/1.7-ObjectObjects.md)（已完成）
-- 数组（编写中）
+- [简介](/1.1-Introduction.md)（已完成）
+- [初探](/1.2-FirstExploration.md)（已完成）
+- [语法](/1.3-Syntax.md)（已完成）
+- [变量和数据类型](/1.4-Variable&Types.md)（已完成）
+- [表达式和运算符](/1.5-Expression&Operators.md)（已完成）
+- [语句](/1.6-Statements.md)（已完成）
+- [对象](/1.7-ObjectObjects.md)（已完成）
+- [数组](/1.8-ArrayObjects.md)（编写中）
 - 函数
 - 正则
 - 其他内置对象
@@ -54,14 +54,33 @@
 - 俄罗斯方块游戏
 - [网站性能优化](http://www.imooc.com/view/50)
 
+## 课程内容来源
+
+本课程内容主要基于以下书籍整理，如需了解更多细节，可自行查阅原著。
+
+> 《编写可维护的 JavaScript》  
+> https://book.douban.com/subject/21792530/
+
+> 《JavaScript 语言精粹》  
+> https://book.douban.com/subject/3590768/
+
+> 《JavaScript DOM 编程艺术》  
+> https://book.douban.com/subject/6038371/
+
+> 《JavaScript 权威指南(第6版)》  
+> https://book.douban.com/subject/10549733/
+
+> 《JavaScript 高级程序设计(第3版)》  
+> https://book.douban.com/subject/10546125/
+
 ## 勘误及提问
 
 如果您在学习本课程时发现错误，或者想提关于本课程的技术问题，可以通过以下方式联系我，或在微信公众号「石佳劼的博客」中给我留言。
 
+> Email：stone0090@hotmail.com  
 > Blog：http://shijiajie.com/about  
-> Email：stone0090@hotmail.com
 
-如需了解课程最新动态，可在 GitHub Star 该项目。
+您还可以在 [GitHub](https://github.com/) 上 Star 该课程，获取最新的推送。
 
 > https://github.com/stone0090/javascript-lessons
 
