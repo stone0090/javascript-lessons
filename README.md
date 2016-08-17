@@ -1,7 +1,6 @@
 # 《JavaScript 闯关记》-- by stone
 
 ## 为何写作此课程
-
 [stone](http://shijiajie.com/about/)  主要负责基于 Web 的企业内部管理系统的开发，虽然能够熟练地使用 JavaScript，但随着对 JavaScript 的理解越来越深，才发现自己尚未掌握其精髓。
 
 2015年，公司请来 [大胡子姜志辉](http://weibo.com/zhihuijiang) 为我们培训 [JS Dota](http://ibagsoft.github.io/js_dota/) 课程，让我对 JavaScript 有了全新的认识，他一步步引导我们手写 jQuery、Backbone 等 JavaScript 主流框架，更是激发了我对 JavaScript 浓厚的兴趣。
@@ -14,14 +13,14 @@
 > 以下目录只是初步构想，课程结构及内容会根据实际情况随时进行调整。
 
 ### 初级：JavaScript 语言核心
-- [简介](/1.1-Introduction.md)（已完成）
-- [初探](/1.2-FirstExploration.md)（已完成）
-- [语法](/1.3-Syntax.md)（已完成）
-- [变量和数据类型](/1.4-Variable&Types.md)（已完成）
-- [表达式和运算符](/1.5-Expression&Operators.md)（已完成）
-- [语句](/1.6-Statements.md)（已完成）
-- [对象](/1.7-ObjectObjects.md)（已完成）
-- [数组](/1.8-ArrayObjects.md)（编写中）
+- [简介](https://github.com/stone0090/javascript-lessons/blob/master/1.1-Introduction.md)（已完成）
+- [初探](https://github.com/stone0090/javascript-lessons/blob/master/1.2-FirstExploration.md)（已完成）
+- [语法](https://github.com/stone0090/javascript-lessons/blob/master/1.3-Syntax.md)（已完成）
+- [变量和数据类型](https://github.com/stone0090/javascript-lessons/blob/master/1.4-Variable&Types.md)（已完成）
+- [表达式和运算符](https://github.com/stone0090/javascript-lessons/blob/master/1.5-Expression&Operators.md)（已完成）
+- [语句](https://github.com/stone0090/javascript-lessons/blob/master/1.6-Statements.md)（已完成）
+- [对象](https://github.com/stone0090/javascript-lessons/blob/master/1.7-ObjectObjects.md)（已完成）
+- [数组](https://github.com/stone0090/javascript-lessons/blob/master/1.8-ArrayObjects.md)（编写中）
 - 函数
 - 正则
 - 其他内置对象
@@ -55,7 +54,6 @@
 - [网站性能优化](http://www.imooc.com/view/50)
 
 ## 课程内容来源
-
 本课程内容主要基于以下书籍整理，如需了解更多细节，可自行查阅原著。
 
 > 《编写可维护的 JavaScript》  
@@ -74,7 +72,6 @@
 > https://book.douban.com/subject/10546125/
 
 ## 勘误及提问
-
 如果您在学习本课程时发现错误，或者想提关于本课程的技术问题，可以通过以下方式联系我，或在微信公众号「石佳劼的博客」中给我留言。
 
 > Email：stone0090@hotmail.com  
