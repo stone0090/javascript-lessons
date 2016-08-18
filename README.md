@@ -20,8 +20,8 @@
 - [表达式和运算符](https://github.com/stone0090/javascript-lessons/blob/master/1.5-Expression&Operators.md)（已完成）
 - [语句](https://github.com/stone0090/javascript-lessons/blob/master/1.6-Statements.md)（已完成）
 - [对象](https://github.com/stone0090/javascript-lessons/blob/master/1.7-ObjectObjects.md)（已完成）
-- [数组](https://github.com/stone0090/javascript-lessons/blob/master/1.8-ArrayObjects.md)（编写中）
-- 函数
+- [数组](https://github.com/stone0090/javascript-lessons/blob/master/1.8-ArrayObjects.md)（已完成）
+- [函数](https://github.com/stone0090/javascript-lessons/blob/master/1.9-FunctionObjects)（编写中）
 - 正则
 - 其他内置对象
 
