@@ -3,7 +3,7 @@
 ## 为何写作此课程
 [stone](http://shijiajie.com/about/)  主要负责基于 Web 的企业内部管理系统的开发，虽然能够熟练地使用 JavaScript，但随着对 JavaScript 的理解越来越深，才发现自己尚未掌握其精髓。
 
-2015年，公司请来 [大胡子姜志辉](http://weibo.com/zhihuijiang) 为我们培训 [JS Dota](http://ibagsoft.github.io/js_dota/) 课程，让我对 JavaScript 有了全新的认识，他一步步引导我们手写 jQuery、Backbone 等 JavaScript 主流框架，更是激发了我对 JavaScript 浓厚的兴趣。
+2015年，公司请来 [大胡子姜志辉](http://weibo.com/zhihuijiang) 为我们培训 [JS Dota](http://ibagmarsoft.github.io/js_dota/) 课程，让我对 JavaScript 有了全新的认识，他一步步引导我们手写 jQuery、Backbone 等 JavaScript 主流框架，更是激发了我对 JavaScript 浓厚的兴趣。
 
 俗话说「教是最好的学」，我是公司的兼职教员，正好借此机会梳理自己 JavaScript 知识体系，深入研究每个知识点，整理成培训课程分享给大家。
 
@@ -21,9 +21,10 @@
 - [语句](https://github.com/stone0090/javascript-lessons/blob/master/1.6-Statements.md)（已完成）
 - [对象](https://github.com/stone0090/javascript-lessons/blob/master/1.7-ObjectObjects.md)（已完成）
 - [数组](https://github.com/stone0090/javascript-lessons/blob/master/1.8-ArrayObjects.md)（已完成）
-- [函数](https://github.com/stone0090/javascript-lessons/blob/master/1.9-FunctionObjects)（编写中）
-- 正则
-- 其他内置对象
+- [函数](https://github.com/stone0090/javascript-lessons/blob/master/1.9-FunctionObjects)（已完成）
+- [正则表达式](https://github.com/stone0090/javascript-lessons/blob/master/1.10-RegExpObjects.md)（已完成）
+- [基本包装类型](https://github.com/stone0090/javascript-lessons/blob/master/1.11-PrimitiveWrapperObjects.md)（已完成）
+- [单体内置对象](https://github.com/stone0090/javascript-lessons/blob/master/1.12-SingletonBuiltInObjects.md)（已完成）
 
 ### 中级：客户端 JavaScript
 - Web浏览器中的 JavaScript
@@ -36,6 +37,8 @@
 - 继承
 - 类和模块
 - this
+- 命名空间
+- 原型
 
 ### 高级：JavaScript「精华」和「糟粕」
 - DOM2和DOM3
