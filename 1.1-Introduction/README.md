@@ -129,8 +129,7 @@ JavaScript 的这3个组成部分，在当前5个主要浏览器（IE、FireFox�
 
 ## 更多
 
-您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，获取最新内容，查看章节目录。
-
+> 您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，查看章节目录，获取最新内容。  
 > https://github.com/stone0090/javascript-lessons
 
 ![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/other/blog_statement_20160618_01.png?imageView2/2/w/650/interlace/1/q/100)
