@@ -13,18 +13,18 @@
 > 以下目录只是初步构想，课程结构及内容会根据实际情况随时进行调整。
 
 ### 初级：JavaScript 语言核心
-- [简介](https://github.com/stone0090/javascript-lessons/blob/master/1.1-Introduction.md)（已完成）
-- [初探](https://github.com/stone0090/javascript-lessons/blob/master/1.2-FirstExploration.md)（已完成）
-- [语法](https://github.com/stone0090/javascript-lessons/blob/master/1.3-Syntax.md)（已完成）
-- [变量和数据类型](https://github.com/stone0090/javascript-lessons/blob/master/1.4-Variable&Types.md)（已完成）
-- [表达式和运算符](https://github.com/stone0090/javascript-lessons/blob/master/1.5-Expression&Operators.md)（已完成）
-- [语句](https://github.com/stone0090/javascript-lessons/blob/master/1.6-Statements.md)（已完成）
-- [对象](https://github.com/stone0090/javascript-lessons/blob/master/1.7-ObjectObjects.md)（已完成）
-- [数组](https://github.com/stone0090/javascript-lessons/blob/master/1.8-ArrayObjects.md)（已完成）
-- [函数](https://github.com/stone0090/javascript-lessons/blob/master/1.9-FunctionObjects)（已完成）
-- [正则表达式](https://github.com/stone0090/javascript-lessons/blob/master/1.10-RegExpObjects.md)（已完成）
-- [基本包装类型](https://github.com/stone0090/javascript-lessons/blob/master/1.11-PrimitiveWrapperObjects.md)（已完成）
-- [单体内置对象](https://github.com/stone0090/javascript-lessons/blob/master/1.12-SingletonBuiltInObjects.md)（已完成）
+- [简介](https://github.com/stone0090/javascript-lessons/tree/master/1.1-Introduction)（已完成）
+- [初探](https://github.com/stone0090/javascript-lessons/tree/master/1.2-FirstExploration)（已完成）
+- [语法](https://github.com/stone0090/javascript-lessons/tree/master/1.3-Syntax)（已完成）
+- [变量和数据类型](https://github.com/stone0090/javascript-lessons/tree/master/1.4-Variable&Types)（已完成）
+- [表达式和运算符](https://github.com/stone0090/javascript-lessons/tree/master/1.5-Expression&Operators)（已完成）
+- [语句](https://github.com/stone0090/javascript-lessons/tree/master/1.6-Statements)（已完成）
+- [对象](https://github.com/stone0090/javascript-lessons/tree/master/1.7-ObjectObjects)（已完成）
+- [数组](https://github.com/stone0090/javascript-lessons/tree/master/1.8-ArrayObjects)（已完成）
+- [函数](https://github.com/stone0090/javascript-lessons/tree/master/1.9-FunctionObjects)（已完成）
+- [正则表达式](https://github.com/stone0090/javascript-lessons/tree/master/1.10-RegExpObjects)（已完成）
+- [基本包装类型](https://github.com/stone0090/javascript-lessons/tree/master/1.11-PrimitiveWrapperObjects)（已完成）
+- [单体内置对象](https://github.com/stone0090/javascript-lessons/tree/master/1.12-SingletonBuiltInObjects)（已完成）
 
 ### 中级：客户端 JavaScript
 - Web浏览器中的 JavaScript
@@ -80,7 +80,7 @@
 > Email：stone0090@hotmail.com  
 > Blog：http://shijiajie.com/about  
 
-您还可以在 [GitHub](https://github.com/) 上 Star 该课程，获取最新的推送。
+您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，获取最新内容，查看章节目录。
 
 > https://github.com/stone0090/javascript-lessons
 
