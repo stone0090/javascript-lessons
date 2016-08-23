@@ -313,7 +313,7 @@ sayColor.call(o);          // blue
 ## 关卡
 
 ``` javascript
-// 挑战一：合并任意个数的字符串
+// 挑战一，合并任意个数的字符串
 var concat = function(){
     // 待实现方法体
 }
@@ -321,11 +321,20 @@ console.log(concat('st','on','e'));  // stone
 ```
 
 ``` javascript
-// 挑战二：输出指定个数的斐波那契数列（从0开始）
+// 挑战二，输出指定位置的斐波那契数列
 var fioacciSequece = function(count){
     // 待实现方法体
 }
-console.log(fioacciSequece(12));  // 0、1、1、2、3、5、8、13、21、34、55、89
+console.log(fioacciSequece(12));  // 0、1、1、2、3、5、8、13、21、34、55、[89]
+```
+
+```
+// 挑战三，三维数组或 n 维数组去重，使用 arguments 重写
+var arr = [2,3,4,[2,3,[2,3,4,2],5],3,5,[2,3,[2,3,4,2],2],4,3,6,2];
+var unique = function(arr){
+    // 待实现方法体
+}
+console.log(unique(arr)); // [2,3,4,5,6]
 ```
 
 ## 更多

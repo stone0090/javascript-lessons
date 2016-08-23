@@ -80,7 +80,7 @@
 > Email：stone0090@hotmail.com  
 > Blog：http://shijiajie.com/about  
 
-您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，获取最新内容，查看章节目录。
+您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，查看章节目录，获取最新内容。  
 
 > https://github.com/stone0090/javascript-lessons
 
