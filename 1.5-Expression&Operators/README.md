@@ -105,7 +105,7 @@ void function(){ console.log("you are so useless?"); }
 
 #### `typeof` 运算符
 
-> 请参见[「变量和数据类型」-「数据类型」-「`typeof` 运算符」](1.4-Variable%26Types.md#typeof-运算符)。
+> 请参见[「变量和数据类型」-「数据类型」-「`typeof` 运算符」](https://github.com/stone0090/javascript-lessons/tree/master/1.5-Expression&Operators#运算符)。
 
 #### `++` `--` 运算符
 
@@ -125,8 +125,8 @@ console.log(--a);   // 5
 
 #### `~` `!` 运算符
 
-> `~` 按位非运算符，请参见下面[「位运算符」](#位运算符)。  
-> `!` 逻辑非运算符，请参见下面[「逻辑运算符」](#逻辑运算符)。
+> `~` 按位非运算符，请参见下面[「位运算符」](https://github.com/stone0090/javascript-lessons/tree/master/1.5-Expression&Operators#位运算符)。  
+> `!` 逻辑非运算符，请参见下面[「逻辑运算符」](https://github.com/stone0090/javascript-lessons/tree/master/1.5-Expression&Operators#逻辑运算符)。
 
 ### 乘性运算符
 

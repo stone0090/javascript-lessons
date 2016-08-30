@@ -146,7 +146,7 @@ var name = person && person.wife && person.wife.name;
 
 `delete` 运算符用来删除对象属性，事实上 `delete` 只是断开属性和宿主对象的联系，并没有真正的删除它。`delete` 运算符只能删除自有属性，不能删除继承属性（要删除继承属性必须从定义这个属性的原型对象上删除它，而且这会影响到所有继承自这个原型的对象）。
 
-> 代码范例，请参见[「变量和数据类型」-「数据类型」-「delete 运算符」](1.4-Variable%26Types.md#delete-运算符)。
+> 代码范例，请参见[「变量和数据类型」-「数据类型」-「delete 运算符」](https://github.com/stone0090/javascript-lessons/tree/master/1.5-Expression%26Operators#delete-运算符)。
 
 ## 检测属性
 

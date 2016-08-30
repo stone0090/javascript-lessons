@@ -455,7 +455,7 @@ function f(o) {
 
 ### `use strict` 语句
 
-> 请参见[「语法」-「严格模式」](/1.3-Syntax.md#严格模式)。
+> 请参见[「语法」-「严格模式」](https://github.com/stone0090/javascript-lessons/tree/master/1.3-Syntax#严格模式)。
 
 ## 关卡
 
