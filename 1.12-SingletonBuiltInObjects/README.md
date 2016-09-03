@@ -13,13 +13,13 @@ ECMA-262 对内置对象的定义是「由 JavaScript 实现提供的、不依�
 其中，`encodeURI()` 主要用于整个 URI，而 `encodeURIComponent()` 主要用于对 URI 中的某一段进行编码。它们的主要区别在于，`encodeURI()` 不会对本身属于 URI 的特殊字符进行编码，例如冒号、正斜杠、问号和井字号；而 `encodeURIComponent()` 则会对它发现的任何非标准字符进行编码。来看下面的例子。
 
 ``` javascript
-var uri = "http://www.wrox.com/illegal value.htm#start";
+var uri = "http://shijiajie.com/illegal value.htm#start";
 
 console.log(encodeURI(uri));
-// "http://www.wrox.com/illegal%20value.htm#start"
+// "http://shijiajie.com/illegal%20value.htm#start"
 
 console.log(encodeURIComponent(uri));
-// "http%3A%2F%2Fwww.wrox.com%2Fillegal%20value.htm%23start"
+// "http%3A%2F%2Fshijiajie.com%2Fillegal%20value.htm%23start"
 ```
 
 使用 `encodeURI()` 编码后的结果是除了空格之外的其他字符都原封不动，只有空格被替换成了 `%20`。而 `encodeURIComponent()` 方法则会使用对应的编码替换所有非字母数字字符。这也正是可以对整个 URI 使用 `encodeURI()`，而只能对附加在现有 URI 后面的字符串使用 `encodeURIComponent()` 的原因所在。
@@ -29,13 +29,13 @@ console.log(encodeURIComponent(uri));
 与 `encodeURI()` 和 `encodeURIComponent()` 方法对应的两个方法分别是 `decodeURI()` 和 `decodeURIComponent()`。其中，`decodeURI()` 只能对使用 `encodeURI()` 替换的字符进行解码。例如，它可将 `%20` 替换成一个空格，但不会对 `%23` 作任何处理，因为 `%23` 表示井字号 `#`，而井字号不是使用 `encodeURI()` 替换的。同样地，`decodeURIComponent()` 能够解码使用 `encodeURIComponent()` 编码的所有字符，即它可以解码任何特殊字符的编码。来看下面的例子：
 
 ``` javascript
-var uri = "http%3A%2F%2Fwww.wrox.com%2Fillegal%20value.htm%23start";
+var uri = "http%3A%2F%2Fshijiajie.com%2Fillegal%20value.htm%23start";
 
 console.log(decodeURI(uri));
-// http%3A%2F%2Fwww.wrox.com%2Fillegal value.htm%23start
+// http%3A%2F%2Fshijiajie.com%2Fillegal value.htm%23start
 
 console.log(decodeURIComponent(uri));
-// http://www.wrox.com/illegal value.htm#start
+// http://shijiajie.com/illegal value.htm#start
 ```
 
 这里，变量 `uri` 包含着一个由 `encodeURIComponent()` 编码的字符串。在第一次调用 `decodeURI()` 输出的结果中，只有 `%20` 被替换成了空格。而在第二次调用 `decodeURIComponent()` 输出的结果中，所有特殊字符的编码都被替换成了原来的字符，得到了一个未经转义的字符串（但这个字符串并不是一个有效的 URI）。
