@@ -105,7 +105,7 @@ void function(){ console.log("you are so useless?"); }
 
 #### `typeof` 运算符
 
-> 请参见[「变量和数据类型」-「数据类型」-「`typeof` 运算符」](https://github.com/stone0090/javascript-lessons/tree/master/1.5-Expression&Operators#运算符)。
+> 请参见[「变量和数据类型」-「数据类型」-「`typeof` 运算符」](https://github.com/stone0090/javascript-lessons/tree/master/1.4-Variable%26Types#typeof-运算符)。
 
 #### `++` `--` 运算符
 

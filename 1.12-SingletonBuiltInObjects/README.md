@@ -90,7 +90,7 @@ eval = "hi";   // causes error
 `Global` 对象还包含一些属性，其中一部分属性已经在本书前面介绍过了。例如，特殊的值 `undefined`、`NaN` 以及 `Infinity` 都是 `Global` 对象的属性。此外，所有原生引用类型的构造函数，像 `Object` 和 `Function`，也都是 `Global` 对象的属性。下表列出了 `Global` 对象的所有属性。
 
 | 属性 | 说明 | 属性 | 说明 |
-| -- | -- | -- | -- |
+| --- | --- | --- | --- |
 | undefined | 特殊值undefined | Date | 构造函数Date |
 | NaN | 特殊值NaN | RegExp | 构造函数RegExp |
 | Infinity | 特殊值Infinity | Error | 构造函数Error |
@@ -126,7 +126,7 @@ JavaScript 还为保存数学公式和信息提供了一个公共位置，即 `M
 `Math` 对象包含的属性大都是数学计算中可能会用到的一些特殊值。下表列出了这些属性。
 
 | 属性 | 说明 |
-| -- | -- |
+| --- | --- |
 | Math.E | 自然对数的底数，即常量e的值 |
 | Math.LN10 | 10的自然对数 |
 | Math.LN2 | 2的自然对数 |
@@ -227,7 +227,7 @@ console.log(color);  // 可能是数组中包含的任何一个字符串
 `Math` 对象中还包含其他一些与完成各种简单或复杂计算有关的方法，但详细讨论其中每一个方法的细节及适用情形超出了本书的范围。下面我们就给出一个表格，其中列出了这些没有介绍到的 `Math` 对象的方法。
 
 | 方法 | 说明 |
-| -- | -- |
+| --- | --- |
 | Math.abs(num) | 返回num的绝对值 |
 | Math.asin(x) | 返回x的反正弦值 |
 | Math.exp(num) | 返回Math.E的num次幂 |

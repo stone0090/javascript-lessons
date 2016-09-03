@@ -12,7 +12,7 @@
 ## 课程结构及目录
 > 以下目录只是初步构想，课程结构及内容会根据实际情况随时进行调整。
 
-### 初级：JavaScript 语言核心
+### 初级
 - [简介](https://github.com/stone0090/javascript-lessons/tree/master/1.1-Introduction)（已完成）
 - [初探](https://github.com/stone0090/javascript-lessons/tree/master/1.2-FirstExploration)（已完成）
 - [语法](https://github.com/stone0090/javascript-lessons/tree/master/1.3-Syntax)（已完成）
@@ -26,10 +26,9 @@
 - [基本包装类型](https://github.com/stone0090/javascript-lessons/tree/master/1.11-PrimitiveWrapperObjects)（已完成）
 - [单体内置对象](https://github.com/stone0090/javascript-lessons/tree/master/1.12-SingletonBuiltInObjects)（已完成）
 
-### 中级：客户端 JavaScript
-- Web浏览器中的 JavaScript
-- BOM
-- DOM
+### 中级
+- BOM（浏览器对象模型）（编写中）
+- DOM（文档对象模型）（编写中）
 - 事件
 - 闭包
 - 作用域
@@ -39,8 +38,9 @@
 - this
 - 命名空间
 - 原型
+- 安全性
 
-### 高级：JavaScript「精华」和「糟粕」
+### 高级
 - DOM2和DOM3
 - 面向对象程序设计
 - 全局变量污染
@@ -48,7 +48,7 @@
 - 模块
 - 异常处理
 
-### 实战：JavaScript 最佳实践
+### 实践
 - 手写jQuery
 - 过场动画效果
 - 表单验证插件
