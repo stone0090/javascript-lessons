@@ -4,7 +4,7 @@ ECMAScript 是 JavaScript 的核心，但如果要在 Web 中使用 JavaScript�
 
 ## `window` 对象
 
-BOM 的核心对象是 `window`，它表示浏览器的一个实例。在浏览器中，`window` 对象有双重角色，它既是通过 JavaScript 访问浏览器窗口的一个接口，又是 ECMAScript 规定的 `Global` 对象。这意味着在网页中定义的任何一个对象、变量和函数，都以 `window` 作为其 `Global` 对象，因此有权访问 `isNaN()`、`isFinite()`、`parseInt()`、`parseFloat()`、`encodeURI()`、`encodeURIComponent()` 等方法。
+BOM 的核心对象是 `window`，它表示浏览器的一个实例。在浏览器中，`window` 对象有双重角色，它既是通过 JavaScript 访问浏览器窗口的一个接口，又是 ECMAScript 规定的 `Global` 对象。这意味着在网页中定义的任何一个对象、变量和函数，都以 `window` 作为其 `Global` 对象，因此有权访问 `isNaN()`、`isFinite()`、`parseInt()`、`parseFloat()` 等方法。
 
 ### 全局作用域
 
@@ -399,10 +399,6 @@ location.reload(true);    // 重新加载（从服务器重新加载）
 
 位于 `reload()` 调用之后的代码可能会也可能不会执行，这要取决于网络延迟或系统资源等因素。为此，最好将 `reload()` 放在代码的最后一行。
 
-## `navigator` 对象
-
-## `screen` 对象
-
 ## `history` 对象
 
 `history` 对象保存着用户上网的历史记录，从窗口被打开的那一刻算起。因为 `history` 是 `window` 对象的属性，因此每个浏览器窗口、每个标签页乃至每个框架，都有自己的 `history` 对象与特定的 `window` 对象关联。出于安全方面的考虑，开发人员无法得知用户浏览过的 URL。不过，借由用户访问过的页面列表，同样可以在不知道实际 URL 的情况下实现后退和前进。
@@ -460,3 +456,31 @@ BOM（浏览器对象模型）以 `window` 对象为依托，表示浏览器窗�
 - `navigator` 对象提供了与浏览器有关的信息。到底提供哪些信息，很大程度上取决于用户的浏览器；不过，也有一些公共的属性（如 `userAgent`）存在于所有浏览器中。
 
 BOM中还有两个对象：`screen` 和 `history`，但它们的功能有限。`screen` 对象中保存着与客户端显示器有关的信息，这些信息一般只用于站点分析。`history` 对象为访问浏览器的历史记录开了一个小缝隙，开发人员可以据此判断历史记录的数量，也可以在历史记录中向后或向前导航到任意页面。
+
+## 关卡
+
+``` javascript
+setTimeout(function () {
+    console.log("1");
+}, 0)
+console.log("2");
+// 结果是"12"，还是"21"？
+```
+
+``` javascript
+for (var i = 0;i<5;i++) {
+    setTimeout(function () {
+        console.log(i);
+    }, 0)
+};
+console.log(i);
+// 结果是？
+```
+
+## 更多
+
+> 关注微信公众号「石佳劼的博客」回复「答案」，可获取关卡详解。  
+> 您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，查看章节目录，获取最新内容。  
+> https://github.com/stone0090/javascript-lessons
+
+![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/other/blog_statement_20160618_01.png?imageView2/2/w/650/interlace/1/q/100)
