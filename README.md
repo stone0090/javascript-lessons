@@ -27,7 +27,7 @@
 - [单体内置对象](https://github.com/stone0090/javascript-lessons/tree/master/1.12-SingletonBuiltInObjects)（已完成）
 
 ### 中级
-- BOM（浏览器对象模型）（编写中）
+- [BOM（浏览器对象模型）](https://github.com/stone0090/javascript-lessons/tree/master/2.1-BOM)（已完成）
 - DOM（文档对象模型）（编写中）
 - 事件
 - 闭包

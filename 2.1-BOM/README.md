@@ -460,21 +460,49 @@ BOM中还有两个对象：`screen` 和 `history`，但它们的功能有限。`
 ## 关卡
 
 ``` javascript
+// 挑战一
 setTimeout(function () {
     console.log("1");
 }, 0)
-console.log("2");
-// 结果是"12"，还是"21"？
+console.log("2");   // ???
 ```
 
 ``` javascript
+// 挑战二
 for (var i = 0;i<5;i++) {
     setTimeout(function () {
         console.log(i);
     }, 0)
 };
-console.log(i);
-// 结果是？
+console.log(i);     // ???
+```
+
+``` javascript
+// 挑战三
+var a = 1;
+var obj = {
+    a : 2,
+    b : function(){
+        setTimeout(function () {
+            console.log(this.a);
+        }, 0)
+    }
+}
+obj.b();    // ???
+```
+
+``` javascript
+// 挑战四
+var a = 1;
+var obj = {
+    a : 2,
+    b : function(){
+        setTimeout(function () {
+            console.log(this.a);
+        }.call(this), 0);
+    }
+}
+obj.b();    // ???
 ```
 
 ## 更多
