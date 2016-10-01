@@ -613,8 +613,7 @@ console.log(1 + - + + + - + 1);
 
 ## 更多
 
-> 关注微信公众号「石佳劼的博客」回复「答案」，可获取关卡详解。  
+> 关注微信公众号「劼哥舍」回复「答案」，可获取关卡详解。  
 > 您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，查看章节目录，获取最新内容。  
 > https://github.com/stone0090/javascript-lessons
 
-![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/other/blog_statement_20160618_01.png?imageView2/2/w/650/interlace/1/q/100)

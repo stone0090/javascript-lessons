@@ -28,7 +28,9 @@
 
 ### 中级
 - [BOM（浏览器对象模型）](https://github.com/stone0090/javascript-lessons/tree/master/2.1-BOM)（已完成）
-- DOM（文档对象模型）（编写中）
+- [DOM（文档对象模型）（一）](https://github.com/stone0090/javascript-lessons/tree/master/2.2-DOM)（编写中）
+- [DOM（文档对象模型）（二）](https://github.com/stone0090/javascript-lessons/tree/master/2.2-DOM/README2.md)（编写中）
+- [DOM（文档对象模型）（三）](https://github.com/stone0090/javascript-lessons/tree/master/2.2-DOM/README3.md)（编写中）
 - 事件
 - 闭包
 - 作用域
@@ -75,13 +77,14 @@
 > https://book.douban.com/subject/10546125/
 
 ## 勘误及提问
-如果您在学习本课程时发现错误，或者想提关于本课程的技术问题，可以通过以下方式联系我，或在微信公众号「石佳劼的博客」中给我留言。
+如果您在学习本课程时发现错误，或者想提关于本课程的技术问题，可以通过以下方式联系我。
 
 > Email：stone0090@hotmail.com  
-> Blog：http://shijiajie.com/about  
+> 微博：http://weibo.com/stone0090/
+> 微信公众号：「劼哥舍」or「shijiajie0090」
+
 
 您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，查看章节目录，获取最新内容。  
 
 > https://github.com/stone0090/javascript-lessons
 
-![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/other/blog_statement_20160618_01.png?imageView2/2/w/650/interlace/1/q/100)
