@@ -7,7 +7,7 @@
 
 俗话说「教是最好的学」，我是公司的兼职教员，正好借此机会梳理自己 JavaScript 知识体系，深入研究每个知识点，整理成培训课程分享给大家。
 
-本课程之所以叫做《JavaScript 闯关记》，是因为每个章节都精心设计了挑战关卡，通过提供更多的实战机会，让大家可以循序渐进地、有目的地、有挑战地开展学习。
+本课程之所以叫做《JavaScript 闯关记》，是因为部分章节精心设计了挑战关卡，通过提供更多的实战机会，让大家可以循序渐进地、有目的地、有挑战地开展学习。
 
 ## 课程结构及目录
 > 以下目录只是初步构想，课程结构及内容会根据实际情况随时进行调整。
@@ -28,10 +28,9 @@
 
 ### 中级
 - [BOM（浏览器对象模型）](https://github.com/stone0090/javascript-lessons/tree/master/2.1-BOM)（已完成）
-- [DOM（文档对象模型）（一）](https://github.com/stone0090/javascript-lessons/tree/master/2.2-DOM)（编写中）
-- [DOM（文档对象模型）（二）](https://github.com/stone0090/javascript-lessons/tree/master/2.2-DOM/README2.md)（编写中）
-- [DOM（文档对象模型）（三）](https://github.com/stone0090/javascript-lessons/tree/master/2.2-DOM/README3.md)（编写中）
-- 事件
+- [DOM（文档对象模型）上](https://github.com/stone0090/javascript-lessons/tree/master/2.2-DOM)（已完成）
+- [DOM（文档对象模型）下](https://github.com/stone0090/javascript-lessons/tree/master/2.2-DOM/README2.md)（已完成）
+- 事件（编写中）
 - 闭包
 - 作用域
 - 回调
@@ -80,11 +79,9 @@
 如果您在学习本课程时发现错误，或者想提关于本课程的技术问题，可以通过以下方式联系我。
 
 > Email：stone0090@hotmail.com  
-> 微博：http://weibo.com/stone0090/
-> 微信公众号：「劼哥舍」or「shijiajie0090」
-
+> 微博：http://weibo.com/stone0090/  
+> 微信公众号：「劼哥舍」or「shijiajie0090」  
 
 您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，查看章节目录，获取最新内容。  
 
 > https://github.com/stone0090/javascript-lessons
-

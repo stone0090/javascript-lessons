@@ -129,6 +129,6 @@ JavaScript 的这3个组成部分，在当前5个主要浏览器（IE、FireFox�
 
 ## 更多
 
-> 您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，查看章节目录，获取最新内容。  
-> https://github.com/stone0090/javascript-lessons
+> 关注微信公众号「劼哥舍」回复「答案」，获取关卡详解。  
+> 关注 [https://github.com/stone0090/javascript-lessons](https://github.com/stone0090/javascript-lessons)，获取最新动态。
 
