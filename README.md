@@ -30,7 +30,7 @@
 - [BOM（浏览器对象模型）](https://github.com/stone0090/javascript-lessons/tree/master/2.1-BOM)（已完成）
 - [DOM（文档对象模型）上](https://github.com/stone0090/javascript-lessons/tree/master/2.2-DOM)（已完成）
 - [DOM（文档对象模型）下](https://github.com/stone0090/javascript-lessons/tree/master/2.2-DOM/README2.md)（已完成）
-- 事件（编写中）
+- [事件](https://github.com/stone0090/javascript-lessons/tree/master/2.3-Event/README.md)（已完成）
 - 闭包
 - 作用域
 - 回调
@@ -42,7 +42,7 @@
 - 安全性
 
 ### 高级
-- DOM2和DOM3
+- ​
 - 面向对象程序设计
 - 全局变量污染
 - 级联
