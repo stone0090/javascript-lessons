@@ -23,8 +23,8 @@ var unique = function(arr){
     arr.forEach(function(item) {
         if (Array.isArray(item)) {
             item.forEach(function(i) {
-                if (item.indexOf(i) < 0) {
-                    item.push(i);
+                if (result.indexOf(i) < 0) {
+                    result.push(i);
                 }
             });
         } else {
