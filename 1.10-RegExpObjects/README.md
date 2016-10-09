@@ -1,6 +1,6 @@
 # 正则表达式
 
-> 由于本课程的核心是 JavaScript，所以本文着重讲解了「正则表达式」在 JavaScript 中的用法，并未深入「正则表达式」的具体细节。如果您尚不了解「正则表达式」，强烈推荐您先学习「正则表达式30分钟入门教程 http://deerchao.net/tutorials/regex/regex.htm」之后，再进行本课程的学习。
+> 由于本课程的核心是 JavaScript，所以本文着重讲解了「正则表达式」在 JavaScript 中的用法，并未深入「正则表达式」的具体细节。如果您尚不了解「正则表达式」，强烈推荐您先学习「正则表达式30分钟入门教程 http://deerchao.net/tutorials/regex/regex.html 之后，再进行本课程的学习。
 
 正则表达式（regular expression）是一个描述字符模式的对象，使用正则表达式可以进行强大的模式匹配和文本检索与替换功能。JavaScript 的正则表达式语法是 Perl5 的正则表达式语法的大型子集，所以对于有 Perl 编程经验的程序员来说，学习 JavaScript 中的正则表达式是小菜一碟。
 
