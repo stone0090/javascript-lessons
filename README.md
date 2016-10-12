@@ -3,7 +3,7 @@
 ## 为何写作此课程
 [stone](http://shijiajie.com/about/)  主要负责基于 Web 的企业内部管理系统的开发，虽然能够熟练地使用 JavaScript，但随着对 JavaScript 的理解越来越深，才发现自己尚未掌握其精髓。
 
-2015年，公司请来 [大胡子姜志辉](http://weibo.com/zhihuijiang) 为我们培训 [JS Dota](http://ibagmarsoft.github.io/js_dota/) 课程，让我对 JavaScript 有了全新的认识，他一步步引导我们手写 jQuery、Backbone 等 JavaScript 主流框架，更是激发了我对 JavaScript 浓厚的兴趣。
+2015年，公司请来 [大胡子姜志辉](http://weibo.com/zhihuijiang) 为我们培训 [JS Dota](http://ibagsoft.github.io/js_dota/) 课程，让我对 JavaScript 有了全新的认识，他一步步引导我们手写 jQuery、Backbone 等 JavaScript 主流框架，更是激发了我对 JavaScript 浓厚的兴趣。
 
 俗话说「教是最好的学」，我是公司的兼职教员，正好借此机会梳理自己 JavaScript 知识体系，深入研究每个知识点，整理成培训课程分享给大家。
 
@@ -30,9 +30,8 @@
 - [BOM（浏览器对象模型）](https://github.com/stone0090/javascript-lessons/tree/master/2.1-BOM)（已完成）
 - [DOM（文档对象模型）上](https://github.com/stone0090/javascript-lessons/tree/master/2.2-DOM)（已完成）
 - [DOM（文档对象模型）下](https://github.com/stone0090/javascript-lessons/tree/master/2.2-DOM/README2.md)（已完成）
-- [事件](https://github.com/stone0090/javascript-lessons/tree/master/2.3-Event/README.md)（已完成）
-- 闭包
-- 作用域
+- [事件](https://github.com/stone0090/javascript-lessons/tree/master/2.3-Event)（已完成）
+- [作用域和闭包](https://github.com/stone0090/javascript-lessons/tree/master/2.4-Scope&Closure)（编写中）
 - 回调
 - 继承
 - 类和模块
@@ -41,8 +40,7 @@
 - 原型
 - 安全性
 
-### 高级
-- ​
+### 高级​
 - 面向对象程序设计
 - 全局变量污染
 - 级联
@@ -50,7 +48,7 @@
 - 异常处理
 
 ### 实践
-- 手写jQuery
+- 手写jQlite
 - 过场动画效果
 - 表单验证插件
 - 全屏滚动插件
@@ -78,10 +76,10 @@
 ## 勘误及提问
 如果您在学习本课程时发现错误，或者想提关于本课程的技术问题，可以通过以下方式联系我。
 
+> 微信公众号：劼哥舍
 > Email：stone0090@hotmail.com  
 > 微博：http://weibo.com/stone0090/  
-> 微信公众号：「劼哥舍」or「shijiajie0090」  
 
-您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，查看章节目录，获取最新内容。  
+您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，获取最新内容。  
 
 > https://github.com/stone0090/javascript-lessons
