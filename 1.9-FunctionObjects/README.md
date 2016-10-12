@@ -158,7 +158,7 @@ console.log(data[0].name);  // Zachary
 
 ``` javascript
 function factorial(num){
-if (num <= 1) {
+	if (num <= 1) {
         return 1;
     } else {
         return num * factorial(num-1)
@@ -325,10 +325,10 @@ console.log(concat('st','on','e'));  // stone
 var fioacciSequece = function(count){
     // 待实现方法体
 }
-console.log(fioacciSequece(12));  // 0、1、1、2、3、5、8、13、21、34、55、[89]
+console.log(fioacciSequece(12));  // 0、1、1、2、3、5、8、13、21、34、55、89
 ```
 
-```
+```javascript
 // 挑战三，三维数组或 n 维数组去重，使用 arguments 重写
 var arr = [2,3,4,[2,3,[2,3,4,2],5],3,5,[2,3,[2,3,4,2],2],4,3,6,2];
 var unique = function(arr){
