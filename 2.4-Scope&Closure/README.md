@@ -142,6 +142,231 @@ changeColor();
 
 ![](http://qiniu.shijiajie.com/blog/javascript-lesson/2.41.jpg)
 
-上图中的矩形表示特定的执行环境。其中，内部环境可以通过作用域链访问所有的外部环境，但外部环境不能访问内部环境中的任何变量和函数。这些环境之间的联系是线性、有次序的。每个环境都可以向上搜索作用域链，以查询变量和函数名；但任何环境都不能通过向下搜索作用域链而进入另一个执行环境。对于这个例子中的 `swapColors()` 而言，其作用域链中包含3个对象：`swapColors()` 的变量对象、`changeColor()` 的变量对象和全局变量对象。`swapColors()` 的局部环境开始时会先在自己的变量对象中搜索变量和函数名，如果搜索不到则再搜索上一级作用域链。`changeColor()` 的作用域链中只包含两个对象：它自己的变量对象和全局变量对象。这也就是说，它不能访问 `swapColors()` 的环境。
+上图中的矩形表示特定的执行环境。其中，内部环境可以通过作用域链访问所有的外部环境，但外部环境不能访问内部环境中的任何变量和函数。这些环境之间的联系是线性、有次序的。每个环境都可以向上搜索作用域链，以查询变量和函数名；但任何环境都不能通过向下搜索作用域链而进入另一个执行环境。对于这个例子中的 `swapColors()` 而言，其作用域链中包含3个对象：`swapColors()` 的变量对象、`changeColor()` 的变量对象和全局变量对象。`swapColors()` 的局部环境开始时会先在自己的变量对象中搜索变量和函数名，如果搜索不到则再搜索上一级作用域链。`changeColor()` 的作用域链中只包含两个对象：它自己的变量对象和全局变量对象。这也就是说，它不能访问 `swapColors()` 的环境。函数参数也被当作变量来对待，因此其访问规则与执行环境中的其他变量相同。
 
-> 函数参数也被当作变量来对待，因此其访问规则与执行环境中的其他变量相同。
+## 闭包
+
+MDN 对闭包的定义：
+
+> 闭包是指那些能够访问独立（自由）变量的函数（变量在本地使用，但定义在一个封闭的作用域中）。换句话说，这些函数可以「记忆」它被创建时候的环境。
+
+《JavaScript 权威指南(第6版)》对闭包的定义：
+
+> 函数对象可以通过作用域链相互关联起来，函数体内部的变量都可以保存在函数作用域内，这种特性在计算机科学文献中称为闭包。
+
+《JavaScript 高级程序设计(第3版)》对闭包的定义：
+
+> 闭包是指有权访问另一个函数作用域中的变量的函数。
+
+上面这些定义都很晦涩难懂，[阮一峰](http://www.ruanyifeng.com/)的解释稍微好理解一些：
+
+> 由于在 Javascript 语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成定义在一个函数内部的函数。
+
+### 闭包的用途
+
+闭包可以用在许多地方。它的最大用处有两个，一个是可以读取函数内部的变量（作用域链），另一个就是让这些变量的值始终保持在内存中。怎么来理解这句话呢？请看下面的代码。
+
+```javascript
+function fun() {　　　
+    var n = 1;
+
+    add = function() {
+        n += 1
+    }
+
+    function fun2(){
+        console.log(n);
+    }
+
+    return fun2;
+}
+
+var result = fun();　　
+result(); // 1
+add();
+result(); // 2
+```
+
+
+在这段代码中，`result` 实际上就是函数 `fun2`。它一共运行了两次，第一次的值是 `1`，第二次的值是 `2`。这证明了，函数 `fun` 中的局部变量 `n` 一直保存在内存中，并没有在 `fun` 调用后被自动清除。
+
+为什么会这样呢？原因就在于 `fun` 是 `fun2` 的父函数，而 `fun2` 被赋给了一个全局变量，这导致 `fun2` 始终在内存中，而 `fun2` 的存在依赖于 `fun`，因此 `fun` 也始终在内存中，不会在调用结束后，被垃圾回收机制（garbage collection）回收。
+
+这段代码中另一个值得注意的地方，就是 `add = function() { n += 1 }` 这一行。首先，变量 `add` 前面没有使用 `var` 关键字，因此 `add` 是一个全局变量，而不是局部变量。其次，`add` 的值是一个匿名函数（anonymous function），而这个匿名函数本身也是一个闭包，和 `fun2` 处于同一作用域，所以 `add` 相当于是一个 `setter`，可以在函数外部对函数内部的局部变量进行操作。
+
+###  计数器的困境
+
+我们再来看一个经典例子「计数器的困境」，假设你想统计一些数值，且该计数器在所有函数中都是可用的。你可以定义一个全局变量 `counter` 当做计数器，再定义一个 `add()` 函数来设置计数器递增。代码如下：
+
+```javascript
+var counter = 0;
+function add() {
+    counter += 1;
+}
+
+console.log(add());
+console.log(add());
+console.log(add());
+// 计数器现在为 3
+```
+
+计数器数值在执行 `add()` 函数时发生变化。但问题来了，页面上的任何脚本都能改变计数器 `counter`，即便没有调用 `add()` 函数。如果我们将计数器 `counter ` 定义在 `add()` 函数内部，就不会被外部脚本随意修改到计数器的值了。代码如下：
+
+```javascript
+function add() {
+    var counter = 0;
+    counter += 1;
+}
+
+console.log(add());
+console.log(add());
+console.log(add());
+// 本意是想输出 3, 但事与愿违，输出的都是 1 
+```
+
+因为每次调用 `add()` 函数，计数器都会被重置为 0，输出的都是 1，这并不是我们想要的结果。闭包正好可以解决这个问题，我们在 `add()` 函数内部，再定义一个 `plus()` 内嵌函数（闭包），内嵌函数 `plus()` 可以访问父函数的 `counter` 变量。代码如下：
+
+```javascript
+function add() {
+    var counter = 0;
+    var plus = function() {counter += 1;}
+    plus();    
+    return counter; 
+}
+```
+
+接下来，只要我们能在外部访问 `plus()` 函数，并且确保 `counter = 0` 只执行一次，就能解决计数器的困境。代码如下：
+
+```javascript
+var add = function() {
+    var counter = 0;
+    var plus = function() {return counter += 1;}
+    return plus;
+}
+
+var puls2 = add();
+console.log(puls2());
+console.log(puls2());
+console.log(puls2());
+// 计数器为 3
+```
+
+计数器 `counter` 受 `add()` 函数的作用域保护，只能通过 `puls2` 方法修改。
+
+### 使用闭包的注意点
+
+- 由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在 IE 中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。
+- 闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（public method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。
+
+JavaScript 闭包是一种强大的语言特性。通过使用这个语言特性来隐藏变量，可以避免覆盖其他地方使用的同名变量，理解闭包有助于编写出更有效也更简洁的代码。
+
+##  扩展阅读
+
+> 「五句话搞定 JavaScript 作用域」  
+> http://www.cnblogs.com/wupeiqi/p/5649402.html
+
+> 「JavaScript 闭包究竟是什么」  
+> http://www.cnblogs.com/dolphinX/archive/2012/09/29/2708763.html
+
+> 「阮一峰的网络日志 - 学习 JavaScript 闭包」  
+> http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html
+
+> 「王福朋 - 深入理解 JavaScript 原型和闭包（15）」  
+> http://www.cnblogs.com/wangfupeng1988/p/3994065.html
+
+> 「MDN - 闭包」  
+> https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures
+
+> 「菜鸟教程 - JavaScript 闭包」  
+> http://www.runoob.com/js/js-function-closures.html
+
+
+## 关卡
+
+下面代码块会输出什么结果？
+
+```javascript
+// 挑战一
+scope = 'stone';
+
+function Func() {
+    var scope = "sophie";
+
+    function inner() {
+        console.log(scope);
+    }
+    return inner;
+}
+
+var ret = Func();
+ret();    // ???
+```
+
+```javascript
+// 挑战二
+scope = 'stone';
+
+function Func() {
+    var scope = "sophie";
+
+    function inner() {
+        console.log(scope);
+    }
+    scope = 'tommy';
+    return inner;
+}
+
+var ret = Func();
+ret();    // ???
+```
+
+```javascript
+// 挑战三
+scope = 'stone';
+
+function Bar() {
+    console.log(scope);
+}
+
+function Func() {
+    var scope = "sophie";
+    return Bar;
+}
+
+var ret = Func();
+ret();    // ???
+```
+
+```javascript
+// 关卡四
+var name = "The Window";　　
+var object = {　　　　
+    name: "My Object",
+    getNameFunc: function() {　　　　　　
+        return function() {　　　　　　　　
+            return this.name;　　　　　　
+        };　　　　
+    }　　
+};　　
+console.log(object.getNameFunc()());    // ???
+```
+
+```javascript
+// 关卡五
+var name = "The Window";　　
+var object = {　　　　
+    name: "My Object",
+    getNameFunc: function() {　　　　　　
+        var that = this;　　　　　　
+        return function() {　　　　　　　　
+            return that.name;　　　　　　
+        };　　　　
+    }　　
+};　　
+console.log(object.getNameFunc()());    // ???
+```
+
+## 更多
+
+> 关注微信公众号「劼哥舍」回复「答案」，获取关卡详解。  
+> 关注 [https://github.com/stone0090/javascript-lessons](https://github.com/stone0090/javascript-lessons)，获取最新动态。
