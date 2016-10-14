@@ -9,7 +9,7 @@ console.log(typeof null);         // "object"
 ``` javascript
 // 挑战二
 var message = "some string";
-console.log(typeof massage);    // "undefined"
+console.log(typeof message);    // "undefined"
 message = 10000;
 console.log(typeof message);    // "number"
 ```
