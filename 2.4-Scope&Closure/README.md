@@ -230,7 +230,7 @@ console.log(add());
 function add() {
     var counter = 0;
     var plus = function() {counter += 1;}
-    plus();    
+    plus();
     return counter; 
 }
 ```
@@ -260,34 +260,202 @@ console.log(puls2());
 
 JavaScript 闭包是一种强大的语言特性。通过使用这个语言特性来隐藏变量，可以避免覆盖其他地方使用的同名变量，理解闭包有助于编写出更有效也更简洁的代码。
 
-##  扩展阅读
+## `this` 关键字
 
-> 「五句话搞定 JavaScript 作用域」  
-> http://www.cnblogs.com/wupeiqi/p/5649402.html
+谈到作用域和闭包就不得不说 `this` 关键字，虽然它们之间并没有关联，但是它们一起使用却容易让人产生疑惑。下面列出了使用 `this` 的大部分场景，带大家一探究竟。
 
-> 「JavaScript 闭包究竟是什么」  
-> http://www.cnblogs.com/dolphinX/archive/2012/09/29/2708763.html
+`this` 是 JavaScript 的关键字，指函数执行时的上下文，跟函数定义时的上下文无关。随着函数使用场合的不同，`this` 的值会发生变化。但是有一个总的原则，那就是 `this` 指代的是调用函数的那个对象。
 
-> 「阮一峰的网络日志 - 学习 JavaScript 闭包」  
-> http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html
+### 全局上下文
 
-> 「王福朋 - 深入理解 JavaScript 原型和闭包（15）」  
-> http://www.cnblogs.com/wangfupeng1988/p/3994065.html
+在全局上下文中，也就是在任何函数体外部，`this` 指代全局对象。
 
-> 「MDN - 闭包」  
-> https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures
+```javascript
+// 在浏览器中，this 指代全局对象 window
+console.log(this === window);  // true
+```
 
-> 「菜鸟教程 - JavaScript 闭包」  
-> http://www.runoob.com/js/js-function-closures.html
+### 函数上下文
 
+在函数上下文中，也就是在任何函数体内部，`this` 指代调用函数的那个对象。
+
+#### 函数调用中的 `this`
+
+```javascript
+function f1(){
+    return this;
+}
+
+console.log(f1() === window); // true
+```
+
+如上代码所示，直接定义一个函数 `f1()`，相当于为 `window` 对象定义了一个属性。直接执行函数 `f1()`，相当于执行 `window.f1()`。所以函数 `f1()` 中的 `this` 指代调用函数的那个对象，也就是 `window` 对象。
+
+```javascript
+function f2(){
+    "use strict"; // 这里是严格模式
+    return this;
+}
+
+console.log(f2() === undefined); // true
+```
+
+如上代码所示，在「严格模式」下，禁止 `this` 关键字指向全局对象（在浏览器环境中也就是 `window` 对象），`this` 的值将维持 `undefined` 状态。
+
+#### 对象方法中的 `this`
+
+```javascript
+var o = {
+    name: "stone",
+    f: function() {
+        return this.name;
+    }
+};
+
+console.log(o.f()); // "stone"
+```
+
+如上代码所示，对象 `o` 中包含一个属性 `name` 和一个方法 `f()`。当我们执行 `o.f()` 时，方法 `f()` 中的 `this` 指代调用函数的那个对象，也就是对象 `o`，所以 `this.name` 也就是 `o.name`。
+
+注意，在何处定义函数完全不会影响到 `this` 的行为，我们也可以首先定义函数，然后再将其附属到 `o.f`。这样做 `this` 的行为也一致。如下代码所示：
+
+```javascript
+var fun = function() {
+    return this.name;
+};
+
+var o = { name: "stone" };
+o.f = fun;
+
+console.log(o.f()); // "stone"
+```
+
+类似的，`this` 的绑定只受最靠近的成员引用的影响。在下面的这个例子中，我们把一个方法 `g()` 当作对象 `o.b` 的函数调用。在这次执行期间，函数中的 `this` 将指向 `o.b`。事实上，这与对象本身的成员没有多大关系，最靠近的引用才是最重要的。
+
+```javascript
+o.b = {
+    name: "sophie"
+    g: fun,
+};
+
+console.log(o.b.g()); // "sophie"
+```
+
+#### `eval()` 方法中的 `this`
+`eval()` 方法可以将字符串转换为 JavaScript 代码，使用 `eval()` 方法时，`this` 指向哪里呢？答案很简单，看谁在调用 `eval()` 方法，调用者的执行环境中的 `this` 就被 `eval()` 方法继承下来了。如下代码所示：
+
+```javascript
+// 全局上下文
+function f1(){
+    return eval("this");
+}
+console.log(f1() === window); // true
+
+// 函数上下文
+var o = {
+    name: "stone",
+    f: function() {
+        return eval("this.name");
+    }
+};
+console.log(o.f()); // "stone"
+```
+
+#### `call()` 和 `apply()` 方法中的 `this`
+
+`call()` 和 `apply()` 是函数对象的方法，它的作用是改变函数的调用对象，它的第一个参数就表示改变后的调用这个函数的对象。因此，`this` 指代的就是这两个方法的第一个参数。
+
+```javascript
+var x = 0;　　
+function f() {　　　　
+    console.log(this.x);　　
+}　　
+var o = {};　　
+o.x = 1;
+o.m = f;　　
+o.m.apply(); // 0
+```
+
+`call()` 和 `apply()` 的参数为空时，默认调用全局对象。因此，这时的运行结果为 `0`，证明 `this` 指的是全局对象。如果把最后一行代码修改为：
+
+```javascript
+o.m.apply(o); // 1
+```
+
+运行结果就变成了 `1`，证明了这时 `this` 指代的是对象 `o`。
+
+#### `bind()` 方法中的 `this`
+
+ECMAScript5 引入了 `Function.prototype.bind`。调用 `f.bind(someObject)` 会创建一个与 `f` 具有相同函数体和作用域的函数，但是在这个新函数中，`this` 将永久地被绑定到了 `bind` 的第一个参数，无论这个函数是如何被调用的。如下代码所示：
+
+```javascript
+function f() {
+    return this.a;
+}
+
+var g = f.bind({
+    a: "stone"
+});
+console.log(g()); // stone
+
+var o = {
+    a: 28,
+    f: f,
+    g: g
+};
+console.log(o.f(), o.g()); // 28, stone
+```
+
+#### DOM 事件处理函数中的 `this`
+
+一般来讲，当函数使用 `addEventListener`，被用作事件处理函数时，它的 `this` 指向触发事件的元素。如下代码所示：
+
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <button id="btn" type="button">click</button>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click", function(){
+            this.style.backgroundColor = "#A5D9F3";
+        }, false);
+    </script>
+</body>
+</html>
+```
+
+#### 内联事件处理函数中的 `this`
+
+当代码被内联处理函数调用时，它的 `this` 指向监听器所在的 DOM 元素。如下代码所示：
+
+```html
+<button onclick="alert(this.tagName.toLowerCase());">
+  Show this
+</button>
+```
+
+上面的 `alert` 会显示 `button`，注意只有外层代码中的 `this` 是这样设置的。如果 `this` 被包含在匿名函数中，则又是另外一种情况了。如下代码所示：
+
+```html
+<button onclick="alert((function(){return this})());">
+  Show inner this
+</button>
+```
+
+在这种情况下，`this` 被包含在匿名函数中，相当于处于全局上下文中，所以它指向 `window` 对象。
 
 ## 关卡
 
-下面代码块会输出什么结果？
+仔细想想，下面代码块会输出什么结果呢？
 
 ```javascript
 // 挑战一
-scope = 'stone';
+scope = "stone";
 
 function Func() {
     var scope = "sophie";
@@ -304,7 +472,7 @@ ret();    // ???
 
 ```javascript
 // 挑战二
-scope = 'stone';
+scope = "stone";
 
 function Func() {
     var scope = "sophie";
@@ -312,7 +480,7 @@ function Func() {
     function inner() {
         console.log(scope);
     }
-    scope = 'tommy';
+    scope = "tommy";
     return inner;
 }
 
@@ -322,7 +490,7 @@ ret();    // ???
 
 ```javascript
 // 挑战三
-scope = 'stone';
+scope = "stone";
 
 function Bar() {
     console.log(scope);

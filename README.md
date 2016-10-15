@@ -76,10 +76,11 @@
 ## 勘误及提问
 如果您在学习本课程时发现错误，或者想提关于本课程的技术问题，可以通过以下方式联系我。
 
-> 微信公众号：劼哥舍
+> 微信公众号：劼哥舍  
 > Email：stone0090@hotmail.com  
 > 微博：http://weibo.com/stone0090/  
 
 您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，获取最新内容。  
 
 > https://github.com/stone0090/javascript-lessons
+
