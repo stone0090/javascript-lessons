@@ -59,26 +59,26 @@
 本课程内容主要基于以下书籍整理，如需了解更多细节，可自行查阅原著。
 
 > 《编写可维护的 JavaScript》  
-> https://book.douban.com/subject/21792530/
+> https://book.douban.com/subject/21792530
 
 > 《JavaScript 语言精粹》  
-> https://book.douban.com/subject/3590768/
+> https://book.douban.com/subject/3590768
 
 > 《JavaScript DOM 编程艺术》  
-> https://book.douban.com/subject/6038371/
+> https://book.douban.com/subject/6038371
 
 > 《JavaScript 权威指南(第6版)》  
-> https://book.douban.com/subject/10549733/
+> https://book.douban.com/subject/10549733
 
 > 《JavaScript 高级程序设计(第3版)》  
-> https://book.douban.com/subject/10546125/
+> https://book.douban.com/subject/10546125
 
 ## 勘误及提问
 如果您在学习本课程时发现错误，或者想提关于本课程的技术问题，可以通过以下方式联系我。
 
 > 微信公众号：劼哥舍  
 > Email：stone0090@hotmail.com  
-> 微博：http://weibo.com/stone0090/  
+> 微博：http://weibo.com/stone0090  
 
 您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，获取最新内容。  
 

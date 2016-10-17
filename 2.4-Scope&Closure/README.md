@@ -429,6 +429,27 @@ console.log(o.f(), o.g()); // 28, stone
 </html>
 ```
 
+但在 IE 浏览器中，当函数使用 `attachEvent` ，被用作事件处理函数时，它的 `this` 却指向 `window`。如下代码所示：
+
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <button id="btn" type="button">click</button>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.attachEvent("onclick", function(){
+            console.log(this === window);  // true
+        });
+    </script>
+</body>
+</html>
+```
+
 #### 内联事件处理函数中的 `this`
 
 当代码被内联处理函数调用时，它的 `this` 指向监听器所在的 DOM 元素。如下代码所示：
