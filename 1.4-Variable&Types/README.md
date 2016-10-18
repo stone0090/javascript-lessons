@@ -77,7 +77,7 @@ console.log(typeof 95);          // "number"
 
 从以上例子可以看出，`typeof` 运算符既可以对变量使用，又可以对字面量使用。由于 `typeof` 是一个运算符而不是函数，因此例子中的圆括号尽管可以使用，但并不提倡。
 
-`typeof null` 结果是 `"object"` 是历史遗留 Bug，在 ECMAScript 6中，曾经有提案为历史平反, 将 `type null` 的值纠正为 `"null"`，但最后该提案被拒。理由是历史遗留代码太多，不如继续将错就错。
+`typeof null` 结果是 `"object"` 是历史遗留 Bug，在 ECMAScript 6中，曾经有提案为历史平反, 将 `typeof null` 的值纠正为 `"null"`，但最后该提案被拒。理由是历史遗留代码太多，不如继续将错就错。
 
 从技术角度讲，函数在 JavaScript 中是对象，不是一种数据类型。然而，函数也确实有一些特殊的属性，因此通过 `typeof` 运算符来区分函数和其他对象是有必要的。
 
@@ -138,14 +138,14 @@ console.log(messageAsBoolean);  // true
 
 下表给出了各种数据类型及其对应的转换规则。
 
-| 数据类型 | 转换为true的值 | 转换为false的值 |
-| --- | --- | --- |
-| Undefined | - | undefined |
-| Null | - | null |
-| Boolean | true | false |
-| String  | 任何非空字符串 | ""（空字符串）|
-| Number | 任何非零数字值（包括无穷大）| 0和NaN |
-| Object | 任何对象 | - |
+| 数据类型      | 转换为true的值      | 转换为false的值 |
+| --------- | -------------- | ---------- |
+| Undefined | -              | undefined  |
+| Null      | -              | null       |
+| Boolean   | true           | false      |
+| String    | 任何非空字符串        | ""（空字符串）   |
+| Number    | 任何非零数字值（包括无穷大） | 0和NaN      |
+| Object    | 任何对象           | -          |
 
 ### `Number` 类型
 
@@ -452,10 +452,10 @@ var person = {
 ```
 
 > 挑战九，深度阅读下面两篇文章，提出你的疑问。
-> 
+>
 > 「JavaScript 检测原始值、引用值、属性」
 > http://shijiajie.com/2016/06/20/javascript-maintainable-javascript-validate1/
-> 
+>
 > 「JavaScript 检测之 basevalidate.js」
 > http://shijiajie.com/2016/06/25/javascript-maintainable-javascript-basevalidatejs/
 

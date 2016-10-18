@@ -40,21 +40,21 @@ Web 浏览器只是 ECMAScript 实现的宿主环境之一，其他宿主环境�
 
 #### ECMAScript 历史
 
-> 1997年，ECMAScript 1版发布。
+> 1997年，ECMAScript1 版发布。
 
-> 1998年6月，ECMAScript 2版发布。
+> 1998年6月，ECMAScript2 版发布。
 
-> 1999年12月，ECMAScript 3版发布。
+> 1999年12月，ECMAScript3 版发布。
 
-> 2000年，ECMAScript 4开始酝酿，最终这个版本没有通过。
+> 2000年，ECMAScript4 开始酝酿，最终这个版本没有通过。
 
-> 2009年12月，ECMAScript 5版发布。
+> 2009年12月，ECMAScript5 版发布。
 
-> 2011年6月，ECMAscript 5.1版发布，成为国际标准。
+> 2011年6月，ECMAscript5.1 版发布，成为国际标准。
 
-> 2015年6月，ECMAScript 6正式通过，成为国际标准。
+> 2015年6月，ECMAScript6 正式通过，成为国际标准。
 
-> 扩展阅读「[阮一峰](http://www.ruanyifeng.com/home.html) 的《ECMAScript 6入门》」  
+> 扩展阅读「[阮一峰](http://www.ruanyifeng.com/home.html) 的《ECMAScript6 入门》」  
 > http://es6.ruanyifeng.com/#docs/intro
 
 3.0版是一个巨大的成功，在业界得到广泛支持，成为通行标准，奠定了 JavaScript 语言的基本语法，以后的版本完全继承。直到今天，初学者一开始学习 JavaScript，其实就是在学3.0版的语法。

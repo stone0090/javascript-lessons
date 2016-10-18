@@ -250,8 +250,7 @@ Array.isArray({})   // false
 
 ``` javascript
 var isArray = Array.isArray || function(o) {
-    return typeof o === "object" &&
-    Object.prototype.toString.call(o) === "[object Array]";
+    return typeof o === "object" && Object.prototype.toString.call(o) === "[object Array]";
 };
 ```
 
@@ -352,7 +351,7 @@ JavaScipt 还为数组提供了一个 `unshift()` 方法。顾名思义，`unshi
 ``` javascript
 var values = [1, 2, 3, 4, 5];
 values.reverse();
-console.log(values);  //5,4,3,2,1
+console.log(values);  // 5,4,3,2,1
 ```
 
 `sort()` 方法可以按升序排列数组元素（即最小的值位于最前面，最大的值排在最后面）。`sort()` 方法在排序的过程中会调用每个数组元素的 `toString()`，然后比较得到的字符串，以确定如何排序。即使数组中的每一项都是数值，`sort()` 方法比较的也是字符串，例如：
