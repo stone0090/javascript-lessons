@@ -206,7 +206,7 @@ var stringValue = "hello world";
 console.log(stringValue.charCodeAt(1));  // 101，101是小写字母"e"的字符编码
 ```
 
-ECMAScript 5还定义了另一个访问个别字符的方法。在支持浏览器中，可以使用方括号加数字索引来访问字符串中的特定字符，如下面的例子所示。
+ECMAScript 5 还定义了另一个访问个别字符的方法。在支持浏览器中，可以使用方括号加数字索引来访问字符串中的特定字符，如下面的例子所示。
 
 ``` javascript
 var stringValue = "hello world";
@@ -295,7 +295,7 @@ console.log(positions);    // "3,24,32,35,52"
 ```
 
 ### `trim()` 方法
-ECMAScript 5为所有字符串定义了 `trim()` 方法。这个方法会创建一个字符串的副本，删除前置及后缀的所有空格，然后返回结果。例如：
+ECMAScript 5 为所有字符串定义了 `trim()` 方法。这个方法会创建一个字符串的副本，删除前置及后缀的所有空格，然后返回结果。例如：
 
 ``` javascript
 var stringValue = "   hello world   ";

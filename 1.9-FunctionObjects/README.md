@@ -212,7 +212,7 @@ o.sayColor();   // "blue"
 
 请大家一定要牢记，函数的名字仅仅是一个包含指针的变量而已。因此，即使是在不同的环境中执行，全局的 `sayColor()` 函数与 `o.sayColor()` 指向的仍然是同一个函数。
 
-ECMAScript 5也规范化了另一个函数对象的属性 `caller`。这个属性中保存着「调用当前函数的函数的引用」，如果是在全局作用域中调用当前函数，它的值为 `null`。例如：
+ECMAScript 5 也规范化了另一个函数对象的属性 `caller`。这个属性中保存着「调用当前函数的函数的引用」，如果是在全局作用域中调用当前函数，它的值为 `null`。例如：
 
 ``` javascript
 function outer(){
@@ -252,7 +252,7 @@ console.log(sum.length);          // 2
 console.log(sayHi.length);        // 0
 ```
 
-对于 JavaScript 中的引用类型而言，`prototype` 是保存它们所有实例方法的真正所在。换句话说，诸如 `toString()` 和 `valueOf()` 等方法实际上都保存在 `prototype` 名下，只不过是通过各自对象的实例访问罢了。在创建自定义引用类型以及实现继承时，`prototype` 属性的作用是极为重要的。在 ECMAScript 5中，`prototype` 属性是不可枚举的，因此使用 `for-in` 无法发现。
+对于 JavaScript 中的引用类型而言，`prototype` 是保存它们所有实例方法的真正所在。换句话说，诸如 `toString()` 和 `valueOf()` 等方法实际上都保存在 `prototype` 名下，只不过是通过各自对象的实例访问罢了。在创建自定义引用类型以及实现继承时，`prototype` 属性的作用是极为重要的。在 ECMAScript 5 中，`prototype` 属性是不可枚举的，因此使用 `for-in` 无法发现。
 
 每个函数都包含两个非继承而来的方法：`apply()` 和 `call()`。这两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内 `this` 对象的值。首先，`apply()` 方法接收两个参数：一个是在其中运行函数的作用域，另一个是参数数组。其中，第二个参数可以是 `Array` 的实例，也可以是 `arguments` 对象。例如：
 
