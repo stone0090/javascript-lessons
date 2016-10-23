@@ -1,6 +1,6 @@
 # 原型及原型链
 
-原型链是一种机制，指的是 JavaScript 每个对象都有一个内置的 `__proto__` 属性指向创建它的构造函数的 `prototype`（原型）属性。原型链的作用是为了实现对象的继承，要理解原型链，需要先从 函数对象、`constructor`、`new`、`prototype`、`__proto__` 这五个概念入手。
+原型链是一种机制，指的是 JavaScript 每个对象都有一个内置的 `__proto__` 属性指向创建它的构造函数的 `prototype`（原型）属性。原型链的作用是为了实现对象的继承，要理解原型链，需要先从**函数对象**、`constructor`、`new`、`prototype`、`__proto__` 这五个概念入手。
 
 ## 函数对象
 
@@ -392,7 +392,7 @@ console.log(person1.sayName === person2.sayName);    // true
 
 那是因为当调用构造函数创建一个新实例后，该实例的内部将包含一个指针 `__proto__`，指向构造函数的原型。Firefox、Safari 和 Chrome 的每个对象上都有这个属性 ，而在其他浏览器中是完全不可见的（为了确保浏览器兼容性问题，不要直接使用 `__proto__` 属性，此处只为解释原型链而演示）。让我们来看下面代码和图片：
 
-![](http://qiniu.shijiajie.com/blog/javascript-lesson/2.5/2.jpg)
+![](http://qiniu.shijiajie.com/blog/javascript-lesson/2.5/2.jpg?1)
 
 图中展示了 `Person` 构造函数、`Person` 的原型属性以及 `Person` 现有的两个实例之间的关系。在此，`Person.prototype.constructor` 指回了 `Person`。`Person.prototype` 中除了包含 `constructor` 属性之外，还包括后来添加的其他属性。此外，要格外注意的是，虽然这两个实例都不包含属性和方法，但我们却可以调用 `person1.sayName()`。这是因为内部指针 `__proto__` 指向 `Person.prototype`，而在 `Person.prototype` 中能找到 `sayName()` 方法。
 
