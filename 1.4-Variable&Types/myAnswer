@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+	// 挑战一
+	console.log(typeof "undefined");  // "string"
+	console.log(typeof null);         // "object"  
+	// 挑战二
+	var message = "some string";
+	console.log(typeof massage);    // "undefined"
+	message = 10000;
+	console.log(typeof message);    // "number"
+	// 挑战三
+	var a;							//false
+	var b = null;					//false
+	var c = {};						//true
+	if(a && b && c){
+	    console.log("true.");       
+	}else{
+	    console.log("false.");      // false.
+	}
+	// 挑战四
+	console.log(typeof (0 / 0));    // "number"
+	console.log(023 + 123);         // 2*8+3+123=142
+	// 挑战五
+	console.log(Number("1234S"));   // NaN
+	console.log(parseInt("1234S")); // 1234
+	// 挑战六
+	console.log(3.14E-7 === 0.000000314);   // true 
+	console.log(0.1 + 0.6 === 0.7); // true
+	console.log(0.1 + 0.7 === 0.8); // false 0.7999999999999999
+	console.log(NaN === NaN);       // false
+	// 挑战七
+	console.log("\right\now");          // ight ow
+	console.log("\right\now".length);   // 6
+	console.log(010.toString(2));       // 1010
+	// 挑战八
+	// 1、为 person、wife、child 对象新增 weight 属性，数值分别为 62、36、15。
+	// 2、为 person 对象新增二胎 child2 子对象，name 为 emma，其他属性自行发挥。
+	var person = {
+	    name: "stone",
+	    age: 30,
+	    wife: {
+	        name: "sohpie",
+	        age: 30
+	    },
+	    child:{
+	        name: "tommy",
+	        age: 3
+	    }
+	}
+	person.weight = 62;
+	person.wife.weight = 36;
+	person.child.weight = 15;
+	person.child2 = {
+		name : 'emma',
+		weight : '123',
+		age : '12'
+	}
+	console.log(person);
+</script>
+</body>
+</html>
