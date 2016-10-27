@@ -46,7 +46,7 @@ if (element.tagName.toLowerCase() == "div"){
 - `title`，有关元素的附加说明信息，一般通过工具提示条显示出来。
 - `lang`，元素内容的语言代码，很少使用。
 - `dir`，语言的方向，值为 `"ltr"`（left-to-right，从左至右）或 `"rtl"`（right-to-left，从右至左），也很少使用。
-- `className`，与元素的 `class` 特性对应，即为元素指定的 CSS 类。没有将这个属性命名为 `class`，是因为 `class` 是 ECMAScript 的保留字。
+- `className`，与元素的 `class` 特性对应，即为元素指定的 CSS 类。没有将这个属性命名为 `class`，是因为 `class` 是 JavaScript 的保留字。
 
 上述这些属性都可以用来取得或修改相应的特性值。以下面的HTML元素为例：
 
@@ -155,7 +155,7 @@ console.log(div.mycolor); // "red"
 console.log(div.getAttribute("mycolor")); // null（IE除外）
 ```
 
-这个例子添加了一个名为 `mycolor` 的属性并将它的值设置为 `"red"`。在大多数浏览器中，这个属性都不会自动变成元素的特性，因此想通过 `getAttribute()` 取得同名特性的值，结果会返回 `null`。可是，自定义属性在IE中会被当作元素的特性，反之亦然。
+这个例子添加了一个名为 `mycolor` 的属性并将它的值设置为 `"red"`。在大多数浏览器中，这个属性都不会自动变成元素的特性，因此想通过 `getAttribute()` 取得同名特性的值，结果会返回 `null`。可是，自定义属性在 IE 中会被当作元素的特性，反之亦然。
 
 要介绍的最后一个方法是 `removeAttribute()`，这个方法用于彻底删除元素的特性。调用这个方法不仅会清除特性的值，而且也会从元素中完全删除特性，如下所示：
 
@@ -200,7 +200,7 @@ document.body.appendChild(div);
 </ul>
 ```
 
-如果是IE来解析这些代码，那么 `<ul>` 元素会有3个子节点，分别是3个 `<li>` 元素。但如果是在其他浏览器中，`<ul>` 元素都会有7个元素，包括3个 `<li>` 元素和4个文本节点（表示 `<li>` 元素之间的空白符）。如果像下面这样将元素间的空白符删除，那么所有浏览器都会返回相同数目的子节点。
+如果是 IE8 来解析这些代码，那么 `<ul>` 元素会有3个子节点，分别是3个 `<li>` 元素。但如果是在其他浏览器中，`<ul>` 元素都会有7个元素，包括3个 `<li>` 元素和4个文本节点（表示 `<li>` 元素之间的空白符）。如果像下面这样将元素间的空白符删除，那么所有浏览器都会返回相同数目的子节点。
 
 ```html
 <ul id="myList"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul>
@@ -283,7 +283,7 @@ div.firstChild.nodeValue = "Some <strong>other</strong> message";
 
 应该说，这是在向 DOM 文档中插入文本之前，先对其进行 HTML 编码的一种有效方式。
 
-> 在IE8、Firefox、Safari、Chrome和Opera中，可以通过脚本访问 `Text` 类型的构造函数和原型。
+> 在 IE8、Firefox、Safari、Chrome 和 Opera中，可以通过脚本访问 `Text` 类型的构造函数和原型。
 
 #### 创建文本节点
 
@@ -388,7 +388,7 @@ var comment = document.createComment("A comment ");
 
 ### Attr 类型
 
-元素的特性在 DOM 中以 `Attr` 类型来表示。在所有浏览器中（包括IE8），都可以访问 `Attr` 类型的构造函数和原型。从技术角度讲，特性就是存在于元素的 `attributes` 属性中的节点。特性节点具有下列特征：
+元素的特性在 DOM 中以 `Attr` 类型来表示。在所有浏览器中（包括 IE8），都可以访问 `Attr` 类型的构造函数和原型。从技术角度讲，特性就是存在于元素的 `attributes` 属性中的节点。特性节点具有下列特征：
 
 - `nodeType` 的值为11；
 - `nodeName` 的值是特性的名称；
@@ -397,7 +397,7 @@ var comment = document.createComment("A comment ");
 - 在 HTML 中不支持（没有）子节点；
 - 在 XML 中子节点可以是 `Text `或 `EntityReference`。
 
-尽管它们也是节点，但特性却不被认为是DOM文档树的一部分。开发人员最常使用的是 `getAttribute()`、`setAttribute()` 和 `remveAttribute()` 方法，很少直接引用特性节点。
+尽管它们也是节点，但特性却不被认为是 DOM 文档树的一部分。开发人员最常使用的是 `getAttribute()`、`setAttribute()` 和 `remveAttribute()` 方法，很少直接引用特性节点。
 
 `Attr` 对象有3个属性：`name`、`value` 和 `specified`。其中，`name` 是特性名称（与 `nodeName` 的值相同），`value` 是特性的值（与 `nodeValue` 的值相同），而 `specified` 是一个布尔值，用以区别特性是在代码中指定的，还是默认的。
 
@@ -573,10 +573,7 @@ loadStyleString("body{background-color:red}");
 理解 `NodeList` 及其“近亲” `NamedNodeMap` 和 `HTMLCollection`，是从整体上透彻理解 DOM 的关键所在。这三个集合都是“动态的”；换句话说，每当文档结构发生变化时，它们都会得到更新。因此，它们始终都会保存着最新、最准确的信息。从本质上说，所有 `NodeList` 对象都是在访问 DOM 文档时实时运行的查询。例如，下列代码会导致无限循环：
 
 ```javascript
-var divs = document.getElementsByTagName("div"),
-    i, 
-    div;
-
+var i,div,divs = document.getElementsByTagName("div");
 for (i=0; i < divs.length; i++){
     div = document.createElement("div");
     document.body.appendChild(div);
@@ -588,11 +585,7 @@ for (i=0; i < divs.length; i++){
 如果想要迭代一个 `NodeList`，最好是使用 `length` 属性初始化第二个变量，然后将迭代器与该变量进行比较，如下面的例子所示：
 
 ```javascript
-var divs = document.getElementsByTagName("div"),
-    i,
-    len,
-    div;
-
+var i,len,div,divs = document.getElementsByTagName("div");
 for (i=0, len=divs.length; i < len; i++){
     div = document.createElement("div");
     document.body.appendChild(div);
@@ -617,6 +610,80 @@ DOM 由各种节点构成，简要总结如下。
 访问 DOM 的操作在多数情况下都很直观，不过在处理 `<script>` 和 `<style>` 元素时还是存在一些复杂性。由于这两个元素分别包含脚本和样式信息，因此浏览器通常会将它们与其他元素区别对待。这些区别导致了在针对这些元素使用 `innerHTML` 时，以及在创建新元素时的一些问题。
 
 理解 DOM 的关键，就是理解 DOM 对性能的影响。DOM 操作往往是 JavaScript 程序中开销最大的部分，而因访问 `NodeList` 导致的问题为最多。`NodeList` 对象都是“动态的”，这就意味着每次访问 `NodeList` 对象，都会运行一次查询。有鉴于此，最好的办法就是尽量减少 DOM 操作。
+
+## 关卡
+
+仔细想想，下面代码块会输出什么结果呢？前3个挑战相比前一章节，代码仅仅是多了换行，结果会有什么不一样呢？
+
+```html
+<!-- 挑战一 -->
+<body>
+<div id = "t">
+    <span>aaa</span>
+    <span>bbb</span>
+    <span>ccc</span>
+</div>
+</body>
+<script> 
+    var d = document.getElementById("t");  
+    document.writeln(d.firstChild.innerHTML);  // ???
+    document.writeln(d.lastChild.innerHTML);   // ???   
+</script>
+```
+
+```html
+<!-- 挑战二 -->
+<body name="ddd">
+<div id = "t">
+    <span>aaa</span>
+    <span>bbb</span>
+    <span>ccc</span>
+ </div>
+</body>
+<script> 
+    var d = document.getElementById("t");  
+    document.writeln(d.childNodes[1].innerHTML); // ???
+    document.writeln(d.parentNode.getAttribute("name")); // ???
+</script>
+```
+
+```html
+<!-- 挑战三 -->
+<body name="ddd">
+<div id = "t">
+    <span>aaa</span>
+    <span>bbb</span>
+    <span>ccc</span>
+</div>
+</body>
+<script> 
+    var d = document.getElementById("t").childNodes[1];  
+    document.writeln(d.nextSibling.innerHTML);      // ???
+    document.writeln(d.previousSibling.innerHTML);  // ???
+</script>
+```
+
+```html
+<!-- 挑战四 -->
+<body>
+    <div id="t" class="content" style="background: red;" wife="sophie" onclick="alert('123');"></div>
+</body>
+<script> 
+    var t = document.getElementById("t");    
+    console.log(t.class);                   // ???
+    console.log(t.getAttribute("class"));   // ???
+    console.log(t.className);               // ???
+    console.log(t.getAttribute("className")); // ???
+    console.log(t.style);                   // ???
+    console.log(t.getAttribute("style"));   // ???
+    console.log(t.style.background);        // ???
+    console.log(t.getAttribute("style.background")); // ???
+    console.log(t.wife);                    // ???
+    console.log(t.getAttribute("wife"));    // ???
+    console.log(t.onclick);                 // ???
+    console.log(t.getAttribute("onclick")); // ???
+</script>
+```
 
 ## 更多
 
