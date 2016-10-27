@@ -27,7 +27,7 @@ DOM 可以将任何 HTML 或 XML 文档描绘成一个由多层节点构成的�
 
 ### Node 类型
 
-DOM1 级定义了一个 `Node` 接口，该接口将由 DOM 中的所有节点类型实现。这个 `Node` 接口在 JavaScript 中是作为 `Node` 类型实现的；除了IE之外，在其他所有浏览器中都可以访问到这个类型。JavaScript 中的所有节点类型都继承自 `Node` 类型，因此所有节点类型都共享着相同的基本属性和方法。
+DOM1 级定义了一个 `Node` 接口，该接口将由 DOM 中的所有节点类型实现。这个 `Node` 接口在 JavaScript 中是作为 `Node` 类型实现的；除了 IE 之外，在其他所有浏览器中都可以访问到这个类型。JavaScript 中的所有节点类型都继承自 `Node` 类型，因此所有节点类型都共享着相同的基本属性和方法。
 
 每个节点都有一个 `nodeType` 属性，用于表明节点的类型。节点类型由在 `Node` 类型中定义的下列12个数值常量来表示，任何节点类型必居其一：
 
@@ -48,19 +48,34 @@ DOM1 级定义了一个 `Node` 接口，该接口将由 DOM 中的所有节点�
 
 ```javascript
 if (someNode.nodeType == Node.ELEMENT_NODE){   // 在IE中无效
-    alert("Node is an element.");
+    console.log("Node is an element.");
 }
 ```
 
-这个例子比较了 `someNode.nodeType` 与 `Node.ELEMENT_NODE` 常量。如果二者相等，则意味着 `someNode` 确实是一个元素。然而，由于 IE 没有公开 `Node` 类型的构造函数，因此上面的代码在IE中会导致错误。为了确保跨浏览器兼容，最好还是将 `nodeType` 属性与数字值进行比较，如下所示：
+这个例子比较了 `someNode.nodeType` 与 `Node.ELEMENT_NODE` 常量。如果二者相等，则意味着 `someNode` 确实是一个元素。然而，由于 IE 没有公开 `Node` 类型的构造函数，因此上面的代码在 IE 中会导致错误。为了确保跨浏览器兼容，最好还是将 `nodeType` 属性与数字值进行比较，如下所示：
 
 ```javascript
 if (someNode.nodeType == 1){    // 适用于所有浏览器
-    alert("Node is an element.");
+    console.log("Node is an element.");
 }
 ```
 
-并不是所有节点类型都受到Web浏览器的支持。开发人员最常用的就是元素和文本节点。
+并不是所有节点类型都受到 Web 浏览器的支持。开发人员最常用的就是元素和文本节点。
+
+#### Node 属性概述
+
+Node 常用属性主要有以下10个，接下来我们会着重讲解部分属性。
+
+- `nodeType`：显示节点的类型
+- `nodeName`：显示节点的名称
+- `nodeValue`：显示节点的值
+- `attributes`：获取一个属性节点
+- `firstChild`：表示某一节点的第一个节点
+- `lastChild`：表示某一节点的最后一个子节点
+- `childNodes`：表示所在节点的所有子节点
+- `parentNode`：表示所在节点的父节点
+- `nextSibling`：紧挨着当前节点的下一个节点
+- `previousSibling`：紧挨着当前节点的上一个节点 
 
 #### `nodeName` 和 `nodeValue` 属性
 
@@ -94,9 +109,9 @@ var count = someNode.childNodes.length;
 
 ```javascript
 if (someNode.nextSibling === null){
-    alert("Last node in the parent’s childNodes list.");
+    console.log("Last node in the parent’s childNodes list.");
 } else if (someNode.previousSibling === null){
-    alert("First node in the parent’s childNodes list.");
+    console.log("First node in the parent’s childNodes list.");
 }
 ```
 
@@ -112,12 +127,12 @@ if (someNode.nextSibling === null){
 
 #### 操作节点
 
-因为关系指针都是只读的，所以DOM提供了一些操作节点的方法。其中，最常用的方法是 `appendChild()`，用于向 `childNodes` 列表的末尾添加一个节点。添加节点后，`childNodes` 的新增节点、父节点及以前的最后一个子节点的关系指针都会相应地得到更新。更新完成后，`appendChild()` 返回新增的节点。来看下面的例子：
+因为关系指针都是只读的，所以 DOM 提供了一些操作节点的方法。其中，最常用的方法是 `appendChild()`，用于向 `childNodes` 列表的末尾添加一个节点。添加节点后，`childNodes` 的新增节点、父节点及以前的最后一个子节点的关系指针都会相应地得到更新。更新完成后，`appendChild()` 返回新增的节点。来看下面的例子：
 
 ```javascript
 var returnedNode = someNode.appendChild(newNode);
-alert(returnedNode == newNode);         // true
-alert(someNode.lastChild == newNode);   // true
+console.log(returnedNode == newNode);         // true
+console.log(someNode.lastChild == newNode);   // true
 ```
 
 如果传入到 `appendChild()` 中的节点已经是文档的一部分了，那结果就是将该节点从原来的位置转移到新位置。即使可以将DOM树看成是由一系列指针连接起来的，但任何DOM节点也不能同时出现在文档中的多个位置上。因此，如果在调用 `appendChild()` 时传入了父节点的第一个子节点，那么该节点就会成为父节点的最后一个子节点，如下面的例子所示。
@@ -125,8 +140,8 @@ alert(someNode.lastChild == newNode);   // true
 ```javascript
 // someNode 有多个子节点
 var returnedNode = someNode.appendChild(someNode.firstChild);
-alert(returnedNode == someNode.firstChild);   // false
-alert(returnedNode == someNode.lastChild);    // true
+console.log(returnedNode == someNode.firstChild);   // false
+console.log(returnedNode == someNode.lastChild);    // true
 ```
 
 如果需要把节点放在 `childNodes` 列表中某个特定的位置上，而不是放在末尾，那么可以使用 `insertBefore()` 方法。这个方法接受两个参数：要插入的节点和作为参照的节点。插入节点后，被插入的节点会变成参照节点的前一个同胞节点 `previousSibling`，同时被方法返回。如果参照节点是 `null`，则 `insertBefore()` 与 `appendChild()` 执行相同的操作，如下面的例子所示。
@@ -134,16 +149,16 @@ alert(returnedNode == someNode.lastChild);    // true
 ```javascript
 // 插入后成为最后一个子节点
 returnedNode = someNode.insertBefore(newNode, null);
-alert(newNode == someNode.lastChild);   // true
+console.log(newNode == someNode.lastChild);   // true
 
 // 插入后成为第一个子节点
 var returnedNode = someNode.insertBefore(newNode, someNode.firstChild);
-alert(returnedNode == newNode);         // true
-alert(newNode == someNode.firstChild);  // true
+console.log(returnedNode == newNode);         // true
+console.log(newNode == someNode.firstChild);  // true
 
 // 插入到最后一个子节点前面
 returnedNode = someNode.insertBefore(newNode, someNode.lastChild);
-alert(newNode == someNode.childNodes[someNode.childNodes.length-2]); // true
+console.log(newNode == someNode.childNodes[someNode.childNodes.length-2]); // true
 ```
 
 前面介绍的 `appendChild()` 和 `insertBefore()` 方法都只插入节点，不会移除节点。而下面要介绍的 `replaceChild()` 方法接受的两个参数是：要插入的节点和要替换的节点。要替换的节点将由这个方法返回并从文档树中被移除，同时由要插入的节点占据其位置。来看下面的例子。
@@ -200,8 +215,8 @@ JavaScript 通过 Document 类型表示文档。在浏览器中，`document` 对
 
 ```javascript
 var html = document.documentElement;      // 取得对<html>的引用
-alert(html === document.childNodes[0]);   // true
-alert(html === document.firstChild);      // true
+console.log(html === document.childNodes[0]);   // true
+console.log(html === document.firstChild);      // true
 ```
 
 这个例子说明，`documentElement`、`firstChild` 和 `childNodes[0]` 的值相同，都指向 `<html>` 元素。
@@ -355,38 +370,6 @@ var radios = document.getElementsByName("color");
 
 这个特殊集合始终都可以通过 `HTMLDocument` 对象访问到，而且，与 `HTMLCollection` 对象类似，集合中的项也会随着当前文档内容的更新而更新。
 
-#### DOM 一致性检测
-
-由于 DOM 分为多个级别，也包含多个部分，因此检测浏览器实现了 DOM 的哪些部分就十分必要了。`document.implementation` 属性就是为此提供相应信息和功能的对象，与浏览器对 DOM 的实现直接对应。DOM1 级只为 `document.implementation` 规定了一个方法，即 `hasFeature()`。这个方法接受两个参数：要检测的 DOM 功能的名称及版本号。如果浏览器支持给定名称和版本的功能，则该方法返回 `true`，如下面的例子所示：
-
-```javascript
-var hasXmlDom = document.implementation.hasFeature("XML", "1.0");
-```
-
-下表列出了可以检测的不同的值及版本号。
-
-| 功　　能           | 版　本　号       |                                 |
-| -------------- | ----------- | ------------------------------- |
-| Core           | 1.0、2.0、3.0 | 基本的DOM，用于描述表现文档的节点树             |
-| XML            | 1.0、2.0、3.0 | Core的XML扩展，添加了对CDATA、处理指令及实体的支持 |
-| HTML           | 1.0、2.0     | XML的HTML扩展，添加了对HTML特有元素及实体的支持   |
-| Views          | 2.0         | 基于某些样式完成文档的格式化                  |
-| StyleSheets    | 2.0         | 将样式表关联到文档                       |
-| CSS            | 2.0         | 对层叠样式表1级的支持                     |
-| CSS2           | 2.0         | 对层叠样式表2级的支持                     |
-| Events         | 2.0，3.0     | 常规的DOM事件                        |
-| UIEvents       | 2.0，3.0     | 用户界面事件                          |
-| MouseEvents    | 2.0，3.0     | 由鼠标引发的事件（`click`、`mouseover`等）  |
-| MutationEvents | 2.0，3.0     | DOM树变化时引发的事件                    |
-| HTMLEvents     | 2.0         | HTML4.01事件                      |
-| Range          | 2.0         | 用于操作DOM树中某个范围的对象和方法             |
-| Traversal      | 2.0         | 遍历DOM树的方法                       |
-| LS             | 3.0         | 文件与DOM树之间的同步加载和保存               |
-| LS-Async       | 3.0         | 文件与DOM树之间的异步加载和保存               |
-| Validation     | 3.0         | 在确保有效的前提下修改DOM树的方法              |
-
-尽管使用 `hasFeature()` 确实方便，但也有缺点。因为实现者可以自行决定是否与 DOM 规范的不同部分保持一致。事实上，要想让 `hasFearture()` 方法针对所有值都返回 `true` 很容易，但返回 `true` 有时候也不意味着实现与规范一致。例如，Safari 2.*x*及更早版本会在没有完全实现某些 DOM 功能的情况下也返回 `true`。为此，我们建议多数情况下，在使用 DOM 的某些特殊的功能之前，最好除了检测 `hasFeature()` 之外，还同时使用能力检测。
-
 #### 文档写入
 
 有一个 `document` 对象的功能已经存在很多年了，那就是将输出流写入到网页中的能力。这个能力体现在下列4个方法中：`write()`、`writeln()`、`open()` 和 `close()`。其中，`write()` 和 `writeln()` 方法都接受一个字符串参数，即要写入到输出流中的文本。`write()` 会原样写入，而 `writeln()` 则会在字符串的末尾添加一个换行符 `\n`。在页面被加载的过程中，可以使用这两个方法向页面中动态地加入内容，如下面的例子所示。
@@ -463,6 +446,46 @@ var hasXmlDom = document.implementation.hasFeature("XML", "1.0");
 在这个例子中，我们使用了 `window.onload` 事件处理程序，等到页面完全加载之后延迟执行函数。函数执行之后，字符串 `"Hello world!"` 会重写整个页面内容。
 
 方法 `open()` 和 `close()` 分别用于打开和关闭网页的输出流。如果是在页面加载期间使用 `write()` 或 `writeln()` 方法，则不需要用到这两个方法。
+
+## 关卡
+
+仔细想想，下面代码块会输出什么结果呢？
+
+```html
+<!-- 挑战一 -->
+<body>
+<div id = "t"><span>aaa</span><span>bbb</span><span>ccc</span></div>
+</body>
+<script> 
+    var d = document.getElementById("t");  
+    document.writeln(d.firstChild.innerHTML);  // ???
+    document.writeln(d.lastChild.innerHTML);   // ???   
+</script>
+```
+
+```html
+<!-- 挑战二 -->
+<body name="ddd">
+<div id = "t"><span>aaa</span><span>bbb</span><span>ccc</span></div>
+</body>
+<script> 
+    var d = document.getElementById("t");  
+    document.writeln(d.childNodes[1].innerHTML); // ???
+    document.writeln(d.parentNode.getAttribute("name")); // ???
+</script>
+```
+
+```html
+<!-- 挑战三 -->
+<body name="ddd">
+<div id = "t"><span>aaa</span><span>bbb</span><span>ccc</span></div>
+</body>
+<script> 
+    var d = document.getElementById("t").childNodes[1];  
+    document.writeln(d.nextSibling.innerHTML);      // ???
+    document.writeln(d.previousSibling.innerHTML);  // ???
+</script>
+```
 
 ## 更多
 

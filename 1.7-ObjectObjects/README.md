@@ -4,7 +4,7 @@
 
 对象最常见的用法是创建（create）、设置（set）、查找（query）、删除（delete）、检测（test）和枚举（enumerate）它的属性。
 
-属性包括名字和值。属性名可以是包含空字符串在内的任意字符串，但对象中不能存在两个同名的属性。值可以是任意 JavaScript 值，或者在 ECMAScript 5中可以是 `getter` 或 `setter` 函数。
+属性包括名字和值。属性名可以是包含空字符串在内的任意字符串，但对象中不能存在两个同名的属性。值可以是任意 JavaScript 值，或者在 ECMAScript 5 中可以是 `getter` 或 `setter` 函数。
 
 除了名字和值之外，每个属性还有一些与之相关的值，称为「属性特性（property attribute）」：
 
@@ -12,13 +12,13 @@
 - 可枚举（enumerable attribute），表明是否可以通过 `for-in` 循环返回该属性。
 - 可配置（configurable attribute），表明是否可以删除或修改该属性。
 
-在 ECMAScript 5之前，通过代码给对象创建的所有属性都是可写的、可枚举的和可配置的。在 ECMAScript 5中则可以对这些特性加以配置。
+在 ECMAScript 5 之前，通过代码给对象创建的所有属性都是可写的、可枚举的和可配置的。在 ECMAScript 5 中则可以对这些特性加以配置。
 
 除了包含属性特性之外，每个对象还拥有三个相关的「对象特性（object attribute）」：
 
 - 对象的类（class），是一个标识对象类型的字符串。
 - 对象的原型（prototype），指向另外一个对象，本对象的属性继承自它的原型对象。
-- 对象的扩展标记（extensible flag），指明了在 ECMAScript 5中是否可以向该对象添加新属性。
+- 对象的扩展标记（extensible flag），指明了在 ECMAScript 5 中是否可以向该对象添加新属性。
 
 最后，用下面术语来对 JavaScript 的「三类对象」和「两类属性」进行区分：
 
@@ -30,7 +30,7 @@
 
 ## 创建对象
 
-可以使用对象字面量、`new` 关键字和 ECMAScript 5中的 `Object.create()` 函数来创建对象。
+可以使用对象字面量、`new` 关键字和 ECMAScript 5 中的 `Object.create()` 函数来创建对象。
 
 ### 使用对象字面量创建对象（推荐）
 
@@ -64,7 +64,7 @@ person.age = 28;
 
 ### 使用 `Object.create()` 函数创建对象
 
-ECMAScript 5定义了一个名为 `Object.create()` 的方法，它创建一个新对象，其中第一个参数是这个对象的原型。`Object.create()` 提供第二个可选参数，用以对对象的属性进行进一步描述。`Object.create()` 是一个静态函数，而不是提供给某个对象调用的方法。使用它的方法很简单，只须传入所需的原型对象即可。例如：
+ECMAScript 5 定义了一个名为 `Object.create()` 的方法，它创建一个新对象，其中第一个参数是这个对象的原型。`Object.create()` 提供第二个可选参数，用以对对象的属性进行进一步描述。`Object.create()` 是一个静态函数，而不是提供给某个对象调用的方法。使用它的方法很简单，只须传入所需的原型对象即可。例如：
 
 ``` javascript
 var person = Object.create(Object.prototype);
@@ -170,7 +170,7 @@ console.log(o.hasOwnProperty("y"));          // false，y不是o的属性
 console.log(o.hasOwnProperty("toString"));   // false，toString是继承属性
 ```
 
-`propertyIsEnumerable()` 是 `hasOwnProperty()` 的增强版，只有检测到是自有属性且这个属性的可枚举性（enumerable attribute）为 `true` 时它才返回 `true`。某些内置属性是不可枚举的。通常由 JavaScript 代码创建的属性都是可枚举的，除非在 ECMAScript 5中使用一个特殊的方法来改变属性的可枚举性。例如：
+`propertyIsEnumerable()` 是 `hasOwnProperty()` 的增强版，只有检测到是自有属性且这个属性的可枚举性（enumerable attribute）为 `true` 时它才返回 `true`。某些内置属性是不可枚举的。通常由 JavaScript 代码创建的属性都是可枚举的，除非在 ECMAScript 5 中使用一个特殊的方法来改变属性的可枚举性。例如：
 
 ``` javascript
 var o = inherit({ y: 2 });
@@ -209,7 +209,7 @@ console.log("x" in o);          // false，属性不再存在
 
 ## 枚举属性
 
-除了检测对象的属性是否存在，我们还会经常遍历对象的属性。通常使用 `for-in` 循环遍历，ECMAScript 5提供了两个更好用的替代方案。
+除了检测对象的属性是否存在，我们还会经常遍历对象的属性。通常使用 `for-in` 循环遍历，ECMAScript 5 提供了两个更好用的替代方案。
 
 `for-in` 循环可以在循环体中遍历对象中所有可枚举的属性（包括自有属性和继承的属性），把属性名称赋值给循环变量。对象继承的内置方法不可枚举的，但在代码中给对象添加的属性都是可枚举的。例如：
 
@@ -221,7 +221,7 @@ for (p in o) {          // 遍历属性
 }
 ```
 
-有许多实用工具库给 `Object.prototype` 添加了新的方法或属性，这些方法和属性可以被所有对象继承并使用。然而在ECMAScript 5标准之前，这些新添加的方法是不能定义为不可枚举的，因此它们都可以在 `for-in` 循环中枚举出来。为了避免这种情况，需要过滤 `for-in` 循环返回的属性，下面两种方式是最常见的：
+有许多实用工具库给 `Object.prototype` 添加了新的方法或属性，这些方法和属性可以被所有对象继承并使用。然而在 ECMAScript 5 标准之前，这些新添加的方法是不能定义为不可枚举的，因此它们都可以在 `for-in` 循环中枚举出来。为了避免这种情况，需要过滤 `for-in` 循环返回的属性，下面两种方式是最常见的：
 
 ``` javascript
 for(p in o) {
@@ -230,11 +230,11 @@ for(p in o) {
 }
 ```
 
-除了 `for-in` 循环之外，ECMAScript 5定义了两个用以枚举属性名称的函数。第一个是 `Object.keys()`，它返回一个数组，这个数组由对象中可枚举的自有属性的名称组成。第二个是 `Object.getOwnPropertyNames()`，它和 `Ojbect.keys()` 类似，只是它返回对象的所有自有属性的名称，而不仅仅是可枚举的属性。在ECMAScript 3中是无法实现的类似的函数的，因为ECMAScript 3中没有提供任何方法来获取对象不可枚举的属性。
+除了 `for-in` 循环之外，ECMAScript 5 定义了两个用以枚举属性名称的函数。第一个是 `Object.keys()`，它返回一个数组，这个数组由对象中可枚举的自有属性的名称组成。第二个是 `Object.getOwnPropertyNames()`，它和 `Ojbect.keys()` 类似，只是它返回对象的所有自有属性的名称，而不仅仅是可枚举的属性。在 ECMAScript 3 中是无法实现的类似的函数的，因为 ECMAScript 3 中没有提供任何方法来获取对象不可枚举的属性。
 
 ## 属性的 `getter` 和 `setter`
 
-我们知道，对象属性是由名字、值和一组特性（attribute）构成的。在ECMAScript 5中，属性值可以用一个或两个方法替代，这两个方法就是 `getter` 和 `setter`。由 `getter` 和 `setter` 定义的属性称做「存取器属性（accessor property）」，它不同于「数据属性（data property）」，数据属性只有一个简单的值。
+我们知道，对象属性是由名字、值和一组特性（attribute）构成的。在 ECMAScript 5 中，属性值可以用一个或两个方法替代，这两个方法就是 `getter` 和 `setter`。由 `getter` 和 `setter` 定义的属性称做「存取器属性（accessor property）」，它不同于「数据属性（data property）」，数据属性只有一个简单的值。
 
 当程序查询存取器属性的值时，JavaScript 调用 `getter` 方法。这个方法的返回值就是属性存取表达式的值。当程序设置一个存取器属性的值时，JavaScript 调用 `setter` 方法，将赋值表达式右侧的值当做参数传入 `setter`。从某种意义上讲，这个方法负责「设置」属性值。可以忽略 `setter` 方法的返回值。
 
@@ -255,7 +255,7 @@ var o = {
 
 ## 序列化对象（JSON）
 
-对象序列化（serialization）是指将对象的状态转换为字符串，也可将字符串还原为对象。ECMAScript 5提供了内置函数 `JSON.stringify()` 和 `JSON.parse()` 用来序列化和还原 JavaScript 对象。这些方法都使用 JSON 作为数据交换格式，JSON 的全称是「JavaScript 对象表示法（JavaScript Object Notation）」，它的语法和 JavaScript 对象与数组直接量的语法非常相近。例如：
+对象序列化（serialization）是指将对象的状态转换为字符串，也可将字符串还原为对象。ECMAScript 5 提供了内置函数 `JSON.stringify()` 和 `JSON.parse()` 用来序列化和还原 JavaScript 对象。这些方法都使用 JSON 作为数据交换格式，JSON 的全称是「JavaScript 对象表示法（JavaScript Object Notation）」，它的语法和 JavaScript 对象与数组直接量的语法非常相近。例如：
 
 ``` javascript
 o = {x:1, y:{z:[false,null,""]}};       // 定义一个对象
@@ -263,7 +263,7 @@ s = JSON.stringify(o);                  // s是 '{"x":1,"y":{"z":[false,null,""]
 p = JSON.parse(s);                      // p是o的深拷贝
 ```
 
-ECMAScript 5中的这些函数的本地实现和 https://github.com/douglascrockford/JSON-js 中的公共域ECMAScript 3版本的实现非常类似，或者说完全一样，因此可以通过引入 `json2.js` 模块在ECMAScript 3的环境中使用ECMAScript 5中的这些函数。
+ECMAScript 5 中的这些函数的本地实现和 https://github.com/douglascrockford/JSON-js 中的公共域 ECMAScript 3 版本的实现非常类似，或者说完全一样，因此可以通过引入 `json2.js` 模块在 ECMAScript 3 的环境中使用 ECMAScript 5 中的这些函数。
 
 JSON 的语法是 JavaScript 语法的子集，它并不能表示 JavaScript 里的所有值。它支持对象、数组、字符串、无穷大数字、`true`、`false` 和 `null`，可以序列化和还原它们。`NaN`、`Infinity` 和 `-Infinity` 序列化的结果是 `null`，日期对象序列化的结果是 ISO 格式的日期字符串（参照 `Date.toJSON()` 函数），但 `JSON.parse()` 依然保留它们的字符串形态，而不会将它们还原为原始日期对象。函数、`RegExp`、`Error` 对象和 `undefined` 值不能序列化和还原。`JSON.stringify()` 只能序列化对象可枚举的自有属性。对于一个不能序列化的属性来说，在序列化后的输出字符串中会将这个属性省略掉。`JSON.stringify()` 和 `JSON.parse()` 都可以接收第二个可选参数，通过传入需要序列化或还原的属性列表来定制自定义的序列化或还原操作。
 

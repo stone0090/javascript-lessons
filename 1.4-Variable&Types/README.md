@@ -77,7 +77,7 @@ console.log(typeof 95);          // "number"
 
 从以上例子可以看出，`typeof` 运算符既可以对变量使用，又可以对字面量使用。由于 `typeof` 是一个运算符而不是函数，因此例子中的圆括号尽管可以使用，但并不提倡。
 
-`typeof null` 结果是 `"object"` 是历史遗留 Bug，在 ECMAScript 6中，曾经有提案为历史平反, 将 `typeof null` 的值纠正为 `"null"`，但最后该提案被拒。理由是历史遗留代码太多，不如继续将错就错。
+`typeof null` 结果是 `"object"` 是历史遗留 Bug，在 ECMAScript 6 中，曾经有提案为历史平反, 将 `typeof null` 的值纠正为 `"null"`，但最后该提案被拒。理由是历史遗留代码太多，不如继续将错就错。
 
 从技术角度讲，函数在 JavaScript 中是对象，不是一种数据类型。然而，函数也确实有一些特殊的属性，因此通过 `typeof` 运算符来区分函数和其他对象是有必要的。
 

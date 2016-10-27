@@ -386,7 +386,7 @@ o.m.apply(o); // 1
 
 #### `bind()` 方法中的 `this`
 
-ECMAScript5 引入了 `Function.prototype.bind`。调用 `f.bind(someObject)` 会创建一个与 `f` 具有相同函数体和作用域的函数，但是在这个新函数中，`this` 将永久地被绑定到了 `bind` 的第一个参数，无论这个函数是如何被调用的。如下代码所示：
+ECMAScript 5 引入了 `Function.prototype.bind`。调用 `f.bind(someObject)` 会创建一个与 `f` 具有相同函数体和作用域的函数，但是在这个新函数中，`this` 将永久地被绑定到了 `bind` 的第一个参数，无论这个函数是如何被调用的。如下代码所示：
 
 ```javascript
 function f() {
@@ -527,7 +527,7 @@ ret();    // ???
 ```
 
 ```javascript
-// 关卡四
+// 挑战四
 var name = "The Window";　　
 var object = {　　　　
     name: "My Object",
@@ -541,7 +541,7 @@ console.log(object.getNameFunc()());    // ???
 ```
 
 ```javascript
-// 关卡五
+// 挑战五
 var name = "The Window";　　
 var object = {　　　　
     name: "My Object",

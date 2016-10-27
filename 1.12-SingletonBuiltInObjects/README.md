@@ -101,7 +101,7 @@ eval = "hi";   // causes error
 | String | 构造函数String | TypeError | 构造函数TypeError |
 | Number | 构造函数Number | URIError | 构造函数URIError |
 
-ECMAScript 5明确禁止给 `undefined`、`NaN` 和 `Infinity` 赋值，这样做即使在非严格模式下也会导致错误。
+ECMAScript 5 明确禁止给 `undefined`、`NaN` 和 `Infinity` 赋值，这样做即使在非严格模式下也会导致错误。
 
 ### `window` 对象
 JavaScript 虽然没有指出如何直接访问 `Global` 对象，但 Web 浏览器都是将这个全局对象作为 `window` 对象的一部分加以实现的。因此，在全局作用域中声明的所有变量和函数，就都成为了 `window` 对象的属性。来看下面的例子。
