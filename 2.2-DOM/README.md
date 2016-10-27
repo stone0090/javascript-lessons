@@ -135,7 +135,7 @@ console.log(returnedNode == newNode);         // true
 console.log(someNode.lastChild == newNode);   // true
 ```
 
-如果传入到 `appendChild()` 中的节点已经是文档的一部分了，那结果就是将该节点从原来的位置转移到新位置。即使可以将DOM树看成是由一系列指针连接起来的，但任何DOM节点也不能同时出现在文档中的多个位置上。因此，如果在调用 `appendChild()` 时传入了父节点的第一个子节点，那么该节点就会成为父节点的最后一个子节点，如下面的例子所示。
+如果传入到 `appendChild()` 中的节点已经是文档的一部分了，那结果就是将该节点从原来的位置转移到新位置。即使可以将 DOM 树看成是由一系列指针连接起来的，但任何 DOM 节点也不能同时出现在文档中的多个位置上。因此，如果在调用 `appendChild()` 时传入了父节点的第一个子节点，那么该节点就会成为父节点的最后一个子节点，如下面的例子所示。
 
 ```javascript
 // someNode 有多个子节点
@@ -274,7 +274,7 @@ var referrer = document.referrer;
 
 第一个方法，`getElementById()`，接收一个参数：要取得的元素的 ID。如果找到相应的元素则返回该元素，如果不存在带有相应 ID 的元素，则返回 `null`。注意，这里的 ID 必须与页面中元素的 `id` 特性（attribute）严格匹配，包括大小写。以下面的元素为例。
 
-```javascript
+```html
 <div id="myDiv">Some text</div>
 ```
 
