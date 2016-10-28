@@ -509,14 +509,54 @@ console.log(son.getValue === son.__proto__.__proto__.getValue); // true
 // 挑战一
 // 1.定义一个构造函数 Animal，它有一个 name 属性，以及一个 eat() 原型方法。
 // 2.eat() 的方法体为：console.log(this.name + " is eating something.")。
-// 3.new 一个 Animal 的实例，然后调用 eat() 方法。
-// 4.用 __proto__ 来模拟 new 一个 Animal 的实例的过程。
-var Animal = function(){
-  	// 待补充的代码
+// 3.new 一个 Animal 的实例 tiger，然后调用 eat() 方法。
+// 4.用 __proto__ 模拟 new Animal() 的过程，然后调用 eat() 方法。
+
+var Animal = function(name){
+	// 待补充的代码
 };
+
+var tiger = new Animal("tiger");
+// 待补充的代码
+
+var tiger2 = {};
+// 待补充的代码
+```
+```javascript
+// 挑战二
+// 1.定义一个构造函数 Bird，它继承自 Animal，它有一个 name 属性，以及一个 fly() 原型方法。
+// 2.fly() 的方法体为：console.log(this.name + " want to fly higher.");。
+// 3.new 一个 Bird 的实例 pigeon，然后调用 eat() 和 fly() 方法。
+// 4.用 __proto__ 模拟 new Bird() 的过程，然后用代码解释 pigeon2 为何能调用 eat() 方法。
+
+var Bird = function(name){
+  	// 待补充的代码
+}
+
+var pigeon = new Bird("pigeon");
+// 待补充的代码
+
+var pigeon2 = {};
+// 待补充的代码
 ```
 
+```javascript
+// 挑战三
+// 1.定义一个构造函数 Swallow，它继承自 Bird，它有一个 name 属性，以及一个 nesting() 原型方法。
+// 2.nesting() 的方法体为：console.log(this.name + " is nesting now.");。
+// 3.new 一个 Swallow 的实例 yanzi，然后调用 eat()、fly() 和 nesting() 方法。
+// 4.用 __proto__ 模拟 new Swallow() 的过程，然后用代码解释 yanzi2 为何能调用 eat() 方法。
 
+var Swallow = function(name){
+  	// 待补充的代码
+}
+
+var yanzi = new Swallow("yanzi");
+// 待补充的代码
+
+var yanzi2 = {};
+// 待补充的代码
+```
 
 ## 更多
 
