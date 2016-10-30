@@ -1,10 +1,60 @@
 # 作用域和闭包
 
-在编程语言中，作用域控制着变量与参数的可见性及生命周期。对程序员来说这是一项重要的服务，因为它减少了名称冲突，并且提供了自动内存管理。
+作用域和闭包是 JavaScript 最重要的概念之一，想要进一步学习 JavaScript，就必须理解 JavaScript 作用域和闭包的工作原理。
 
 ## 作用域
 
-一个变量的作用域（scope）是程序源代码中定义这个变量的区域。全局变量拥有全局作用域，在 JavaScript 代码中的任何地方都是有定义的。然而在函数内声明的变量只在函数体内有定义。它们是局部变量，作用域是局部性的。函数参数也是局部变量，它们只在函数体内有定义。
+任何程序设计语言都有作用域的概念，简单的说，作用域就是变量与函数的可访问范围，即作用域控制着变量与函数的可见性和生命周期。在 JavaScript 中，变量的作用域有全局作用域和局部作用域两种。
+
+### 全局作用域（Global Scope）
+
+在代码中任何地方都能访问到的对象拥有全局作用域，一般来说以下三种情形拥有全局作用域：
+
+1. 最外层函数和在最外层函数外面定义的变量拥有全局作用域，例如：
+
+```javascript
+var global = "global";     // 显式声明一个全局变量
+function checkscope() {
+    var local = "local";   // 显式声明一个局部变量
+    return global;         // 返回全局变量的值
+}
+console.log(scope);        // "global"
+console.log(checkscope()); // "global"
+console.log(local);        // error: local is not defined.
+```
+上面代码中，`global` 是全局变量，不管是在 `checkscope()` 函数内部还是外部，都能访问到全局变量 `global`。
+
+2. 所有末定义直接赋值的变量自动声明为拥有全局作用域，例如：
+
+```javascript
+function checkscope() {
+    var local = "local"; // 显式声明一个局部变量
+    global = "global";   // 隐式声明一个全局变量(不好的写法)
+}
+console.log(global);     // "global"
+console.log(local);      // error: local is not defined.
+```
+上面代码中，变量 `global` 未用 `var` 关键字定义就直接赋值，所以隐式的创建了全局变量 `global`，但这种写法容易造成误解，应尽量避免这种写法。
+
+3. 所有 `window` 对象的属性拥有全局作用域
+
+一般情况下，`window` 对象的内置属性都拥有全局作用域，例如 `window.name`、`window.location`、`window.top` 等等。
+
+### 局部作用域（Local Scope）
+
+和全局作用域相反，局部作用域一般只在固定的代码片段内可访问到。最常见的是在函数体内定义的变量，只能在函数体内使用。例如：
+
+```javascript
+function checkscope() {
+    var local = "local";   // 显式声明一个局部变量
+    return local;         // 返回全局变量的值
+}
+console.log(checkscope()); // "local"
+console.log(local);        // error: local is not defined.
+```
+上面代码中，在函数体内定义了变量 `local`，在函数体内是可以访问了，在函数外访问就报错了。
+
+### 全局和局部作用域的关系
 
 在函数体内，局部变量的优先级高于同名的全局变量。如果在函数内声明的一个局部变量或者函数参数中带有的变量和全局变量重名，那么全局变量就被局部变量所遮盖。
 
