@@ -245,7 +245,7 @@ console.log(color);  // 可能是数组中包含的任何一个字符串
 
 ## 关卡
 
-```
+```javascript
 // 如何高效产生m个n范围内的不重复随机数（m<=n)
 var getRandomNumber = function(n, m){
     // 待实现方法体
