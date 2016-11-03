@@ -8,6 +8,20 @@
 
 ```javascript
 // 挑战一
+function func1() {
+    function func2() {
+        console.log(this)
+    }
+    return func2;
+}
+func1()();  // ???
+```
+
+挑战一解析见[闭包那一章有疑惑，望解答 #14](https://github.com/stone0090/javascript-lessons/issues/14)。
+
+
+```javascript
+// 挑战二
 scope = "stone";
 
 function Func() {
@@ -24,7 +38,7 @@ ret();    // "sophie"
 ```
 
 ```javascript
-// 挑战二
+// 挑战三
 scope = "stone";
 
 function Func() {
@@ -41,11 +55,11 @@ var ret = Func();
 ret();    // "tommy"
 ```
 
-- 关卡二解析，虽然在内部函数 `inner()` 被创建时，局部变量 `scope` 的值为 `"sophie"`，但当函数执行到 `return inner` 时，局部变量 `scope` 的值已被更新为 `"tommy"`，所以最终输出的结果为 `"tommy"`。
+- 挑战三解析，虽然在内部函数 `inner()` 被创建时，局部变量 `scope` 的值为 `"sophie"`，但当函数执行到 `return inner` 时，局部变量 `scope` 的值已被更新为 `"tommy"`，所以最终输出的结果为 `"tommy"`。
 - 注意：`inner()` 函数的局部变量 `scope` 记录的并不是创建瞬间的值，而是指向 `Func()` 函数的局部变量的 `scope` 的指针，「内部函数的变量」会随着「外层函数的变量」的值一起发生改变。
 
 ```javascript
-// 挑战三
+// 挑战四
 scope = "stone";
 
 function Bar() {
@@ -62,7 +76,7 @@ ret();    // "stone"
 ```
 
 ```javascript
-// 关卡四
+// 挑战五
 var name = "The Window";　　
 var object = {　　　　
     name: "My Object",
@@ -76,7 +90,7 @@ console.log(object.getNameFunc()());    // "The Window"
 ```
 
 ```javascript
-// 关卡五
+// 挑战六
 var name = "The Window";　　
 var object = {　　　　
     name: "My Object",

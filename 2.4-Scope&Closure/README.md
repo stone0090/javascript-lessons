@@ -526,6 +526,17 @@ console.log(o.f(), o.g()); // 28, stone
 
 ```javascript
 // 挑战一
+function func1() {
+    function func2() {
+        console.log(this)
+    }
+    return func2;
+}
+func1()();  // ???
+```
+
+```javascript
+// 挑战二
 scope = "stone";
 
 function Func() {
@@ -542,7 +553,7 @@ ret();    // ???
 ```
 
 ```javascript
-// 挑战二
+// 挑战三
 scope = "stone";
 
 function Func() {
@@ -560,7 +571,7 @@ ret();    // ???
 ```
 
 ```javascript
-// 挑战三
+// 挑战四
 scope = "stone";
 
 function Bar() {
@@ -577,7 +588,7 @@ ret();    // ???
 ```
 
 ```javascript
-// 挑战四
+// 挑战五
 var name = "The Window";　　
 var object = {　　　　
     name: "My Object",
@@ -591,7 +602,7 @@ console.log(object.getNameFunc()());    // ???
 ```
 
 ```javascript
-// 挑战五
+// 挑战六
 var name = "The Window";　　
 var object = {　　　　
     name: "My Object",
