@@ -36,12 +36,12 @@
 - [综合挑战](https://github.com/stone0090/javascript-lessons/tree/master/2.9-Challenge)（持续更新...）
 
 ### 实践
-- 精读zepto.js
-- 精读underscore.js
+- [俄罗斯方块游戏](https://github.com/stone0090/javascript-lessons/tree/master/3.1-Tetris)（构思中…）
+- 俄罗斯方块游戏（vue版）
+- 手写zepto.js
 - 过场动画效果
 - 表单验证插件
 - 全屏滚动插件
-- 俄罗斯方块游戏
 - [网站性能优化](http://www.imooc.com/view/50)
 
 ## 课程内容来源
