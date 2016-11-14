@@ -36,7 +36,7 @@
 - [综合挑战](https://github.com/stone0090/javascript-lessons/tree/master/2.9-Challenge)（持续更新...）
 
 ### 实践
-- [俄罗斯方块游戏](https://github.com/stone0090/javascript-lessons/tree/master/3.1-Tetris)（构思中…）
+- [俄罗斯方块游戏](https://github.com/stone0090/javascript-lessons/tree/master/3.1-Tetris)（编写中…）
 - 俄罗斯方块游戏（vue版）
 - 手写zepto.js
 - 过场动画效果

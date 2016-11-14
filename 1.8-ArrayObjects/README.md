@@ -308,6 +308,8 @@ console.log(colors.join("||"));   // red||green||blue
 
  如果数组中的某一项的值是 `null` 或者 `undefined`，那么该值在 `join()`、`toLocaleString()`、`toString()` 和 `valueOf()` 方法返回的结果中以空字符串表示。
 
+> 数组和字符串之间是可以互相转换的，使用 `String` 对象的原型方法 `split()` 即可实现该功能。这个方法可以基于指定的分隔符将一个字符串分割成多个子字符串，并将结果放在一个数组中。例如：`"red,blue,green,yellow".split(",")` 结果是 `["red", "blue", "green", "yellow"]`。更多 `split()` 方法的说明会在后面章节中详细介绍。
+
 ### 栈方法
 
 栈是一种 LIFO（Last-In-First-Out，后进先出）的数据结构，也就是最新添加的项最早被移除。`push()` 方法可以接收任意数量的参数，把它们逐个添加到数组末尾，并返回修改后数组的长度。而 `pop()` 方法则从数组末尾移除最后一项，减少数组的 `length` 值，然后返回移除的项。结合 `push()` 和 `pop()` 方法，就可以像栈一样使用数组。例如：

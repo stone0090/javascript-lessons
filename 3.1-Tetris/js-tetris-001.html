@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>tetris</title>
+  <style type="text/css">
+    .activityModel { margin: 1px; width: 19px; height: 19px; background: red; position: absolute; }
+  </style>
+  <script type="text/javascript">
+    function init() {
+      var div = document.getElementsByClassName("activityModel")[0];
+      div.style.top = 0;
+      div.style.left = 0;
+
+      // 绑定键盘事件
+      document.onkeydown = function(e) {
+        var e = window.event ? window.event : e;
+        switch (e.keyCode) {
+          case 38: //up
+            div.style.top = (parseInt(div.style.top) - 20) + "px";
+            break;
+          case 40: //down
+            div.style.top = (parseInt(div.style.top) + 20) + "px";
+            break;
+          case 37: //left
+            div.style.left = (parseInt(div.style.left) - 20) + "px";
+            break;
+          case 39: //right
+            div.style.left = (parseInt(div.style.left) + 20) + "px";
+            break;
+        }
+      }
+    }
+  </script>
+</head>
+<body onload="init()">
+  <div class="activityModel"></div>
+</body>
+</html>

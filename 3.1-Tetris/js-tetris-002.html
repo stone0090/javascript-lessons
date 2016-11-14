@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>tetris</title>
+  <style type="text/css">
+    .activityModel { margin: 1px; width: 19px; height: 19px; background: red; position: absolute; }
+  </style>
+  <script type="text/javascript">
+
+    var x = 0;
+    var y = 0;
+    var size = 20;
+    var shape = [2,0,2,1,2,2,1,2];
+
+    function init() {
+
+      for (var i = 0; i < 4; i++) {
+        var div = document.createElement("div");
+        div.className = "activityModel";
+        document.body.append(div);
+      }
+
+      show();
+
+      // 绑定键盘事件
+      document.onkeydown = function(e) {
+        var e = window.event ? window.event : e;
+        switch (e.keyCode) {
+          case 32: //rotate
+            rotate();
+            break;
+          case 38: //up
+            move(0, -1);
+            break;
+          case 40: //down
+            move(0, 1);
+            break;
+          case 37: //left
+            move(-1, 0);
+            break;
+          case 39: //right
+            move(1, 0);
+            break;
+        }
+      }
+    }
+
+    // 显示方块
+    var show = function() {
+      var divs = document.getElementsByClassName("activityModel");
+      for (var j = 0; j < divs.length; j++) {
+        divs[j].style.top = (shape[j * 2 + 1] - -y) * size + "px";
+        divs[j].style.left = (shape[j * 2] - -x) * size + "px";
+      }
+    }
+
+    // 旋转方块
+    var rotate = function() {
+      shape = [shape[1], 3 - shape[0], shape[3], 3 - shape[2], shape[5], 3 - shape[4], shape[7], 3 - shape[6]];
+      show();
+    }
+
+    // 移动方块
+    var move = function(a, b) {
+        x += a;
+        y += b
+        show();
+    }
+
+  </script>
+</head>
+<body onload="init()">
+</body>
+</html>
