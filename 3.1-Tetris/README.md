@@ -20,10 +20,10 @@
 - 给该 `div` 添加样式 `.activityModel { margin: 1px; width: 19px; height: 19px; background: red; position: absolute; }`。
 - 使用键盘的「上下左右」键可操作 `div` 移动，每次移动 `20px`。
 
-> 尽量自己完成，不参考我的代码。
-> 源码地址：[`http://t.cn/RfGmjjz`](https://github.com/stone0090/javascript-lessons/blob/master/3.1-Tetris/js-tetris-001.html)。
-> 演示地址：[`http://t.cn/Rfbuawp`](http://sandbox.runjs.cn/show/bfc1xql3)。
-> ![](http://qiniu.shijiajie.com/blog/javascript-lesson/3.1/js-tetris-001.gif)
+> 尽量自己完成，不参考我的代码。  
+> 源码地址：[`http://t.cn/RfGmjjz`](https://github.com/stone0090/javascript-lessons/blob/master/3.1-Tetris/js-tetris-001.html)。  
+> 演示地址：[`http://t.cn/Rfbuawp`](http://sandbox.runjs.cn/show/bfc1xql3)。  
+> ![](http://qiniu.shijiajie.com/blog/javascript-lesson/3.1/js-tetris-001.gif)  
 
 ### 关卡二：操作多个 `div` 整体移动。
 
@@ -31,21 +31,21 @@
 - 使用键盘的「上下左右」键可操作方块移动，每次移动 `20px`。
 - 使用键盘的「空格」键可操作方块旋转。
 
-> 尽量自己完成，不参考我的代码。
-> 源码地址：[`http://t.cn/RfGmTyR`](https://github.com/stone0090/javascript-lessons/blob/master/3.1-Tetris/js-tetris-002.html)。
-> 演示地址：[`http://t.cn/RfG2hd1`](http://sandbox.runjs.cn/show/htxm5rno)。
-> ![](http://qiniu.shijiajie.com/blog/javascript-lesson/3.1/js-tetris-002.gif)
-> 提示：首先，把每个 `div` 当看成是坐标轴里的点，使用坐标来动态绘制方块会更简单。然后，找出方块旋转时坐标改变的规律，利用这个规律操作方块旋转。本关卡的方块可用坐标`2,0``2,1``2,2``1,2`表示，其余六个方块可分别用坐标：`0,1``1,1``2,1``3,1 `、`1,0``1,1,``1,2``2,2`、`0,1``1,1``1,2``2,2`、`1,2``2,2``2,1``3,1`、`1,1``2,1``1,2``2,2`、`0,2``1,2``1,1``2,2`表示。
+> 尽量自己完成，不参考我的代码。  
+> 源码地址：[`http://t.cn/RfGmTyR`](https://github.com/stone0090/javascript-lessons/blob/master/3.1-Tetris/js-tetris-002.html)。  
+> 演示地址：[`http://t.cn/RfG2hd1`](http://sandbox.runjs.cn/show/htxm5rno)。  
+> ![](http://qiniu.shijiajie.com/blog/javascript-lesson/3.1/js-tetris-002.gif)  
+> 提示：首先，把每个 `div` 当看成是坐标轴里的点，使用坐标来动态绘制方块会更简单。然后，找出方块旋转时坐标改变的规律，利用这个规律操作方块旋转。本关卡的方块可用坐标`2,0``2,1``2,2``1,2`表示，其余六个方块可分别用坐标：`0,1``1,1``2,1``3,1 `、`1,0``1,1,``1,2``2,2`、`0,1``1,1``1,2``2,2`、`1,2``2,2``2,1``3,1`、`1,1``2,1``1,2``2,2`、`0,2``1,2``1,1``2,2`表示。  
 
 ### 关卡三：操作多个 `div` 在某个范围内移动和旋转。
 
 - 在该页面上再添加一个 `div`，给该 `div` 添加样式 `.container { top: 0px; left: 0px; width: 200px; height: 360px; background: black; position: absolute; }`，该 `div` 用来表示一个18行10列的容器。
 - 限制方块只能在该容器内部移动和旋转。
 
-> 尽量自己完成，不参考我的代码。
-> 源码地址：[`http://t.cn/RfGmHuv`](https://github.com/stone0090/javascript-lessons/blob/master/3.1-Tetris/js-tetris-003.html)。
-> 演示地址：[`http://t.cn/RfGnp98`](http://sandbox.runjs.cn/show/qgg31pmy)。
-> ![](http://qiniu.shijiajie.com/blog/javascript-lesson/3.1/js-tetris-003.gif)
+> 尽量自己完成，不参考我的代码。  
+> 源码地址：[`http://t.cn/RfGmHuv`](https://github.com/stone0090/javascript-lessons/blob/master/3.1-Tetris/js-tetris-003.html)。  
+> 演示地址：[`http://t.cn/RfGnp98`](http://sandbox.runjs.cn/show/qgg31pmy)。  
+> ![](http://qiniu.shijiajie.com/blog/javascript-lesson/3.1/js-tetris-003.gif)  
 
 ### 关卡四：操作多个 `div` 自动下落，若碰到容器底部，便停下来并变成灰色。
 
@@ -54,10 +54,10 @@
 - 若方块的底部，触碰到容器的底部，便停下来并变成灰色。
 - 然后再创建一个新的方块继续下落，周而复始。
 
-> 尽量自己完成，不参考我的代码。
-> 源码地址：[`http://t.cn/RfqOix9`](https://github.com/stone0090/javascript-lessons/blob/master/3.1-Tetris/js-tetris-004.html)。
-> 演示地址：[`http://t.cn/Rf5cf9I`](http://sandbox.runjs.cn/show/duw0x6t2)。
-> ![](http://qiniu.shijiajie.com/blog/javascript-lesson/3.1/js-tetris-004.gif)
+> 尽量自己完成，不参考我的代码。  
+> 源码地址：[`http://t.cn/RfqOix9`](https://github.com/stone0090/javascript-lessons/blob/master/3.1-Tetris/js-tetris-004.html)。  
+> 演示地址：[`http://t.cn/Rf5cf9I`](http://sandbox.runjs.cn/show/duw0x6t2)。  
+> ![](http://qiniu.shijiajie.com/blog/javascript-lesson/3.1/js-tetris-004.gif)  
 
 ### 关卡五：操作多个 `div` 之间不会互重叠，若铺满一行，便自动消除。
 
@@ -66,10 +66,10 @@
 - 若下落的方块正好铺满一行，便自动消除该行。
 - 然后再从七个基本方块中，随机取一个继续下落，周而复始。
 
-> 尽量自己完成，不参考我的代码。
-> 源码地址：[`http://t.cn/RfqOKkc`](https://github.com/stone0090/javascript-lessons/blob/master/3.1-Tetris/js-tetris-005.html)。
-> 演示地址：[`http://t.cn/Rf5couT`](http://sandbox.runjs.cn/show/jebpssof)。
-> ![](http://qiniu.shijiajie.com/blog/javascript-lesson/3.1/js-tetris-005.gif)
+> 尽量自己完成，不参考我的代码。  
+> 源码地址：[`http://t.cn/RfqOKkc`](https://github.com/stone0090/javascript-lessons/blob/master/3.1-Tetris/js-tetris-005.html)。  
+> 演示地址：[`http://t.cn/Rf5couT`](http://sandbox.runjs.cn/show/jebpssof)。  
+> ![](http://qiniu.shijiajie.com/blog/javascript-lesson/3.1/js-tetris-005.gif)  
 
 ### 关卡六：对「俄罗斯方块」小游戏的功能进行完善。
 
