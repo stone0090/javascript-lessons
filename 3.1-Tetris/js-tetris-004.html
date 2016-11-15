@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>tetris</title>
+  <style type="text/css">
+    .activityModel { margin: 1px; width: 19px; height: 19px; background: red; position: absolute; }
+    .stationaryModel { margin: 1px; width: 19px; height: 19px; background: gray; position: absolute; }
+    .container { top: 0px; left: 0px; width: 200px; height: 360px; background: black; position: absolute; }
+  </style>
+  <script type="text/javascript">
+
+    var x = 3;
+    var y = 0;
+    var size = 20;
+    var shape = [2, 0, 2, 1, 2, 2, 1, 2];
+    var rowCount = 18;
+    var colCount = 10;
+    var intervalId;
+    var intervalId2;
+    var speed = 600;
+
+    function init() {
+
+      create();
+      show();
+
+      // 绑定键盘事件
+      document.onkeydown = function(e) {
+        var e = window.event ? window.event : e;
+        switch (e.keyCode) {
+          case 32: //quickDown
+            quickDown();
+            break;
+          case 38: //rotate
+            rotate(0, -1);
+            break;
+          case 40: //down
+            move(0, 1);
+            break;
+          case 37: //left
+            move(-1, 0);
+            break;
+          case 39: //right
+            move(1, 0);
+            break;
+        }
+      }
+
+      // 方块开始下降
+      intervalId = setInterval("move(0, 1)", speed);
+    }
+
+    // 创建方块
+    var create = function() {
+      for (var i = 0; i < 4; i++) {
+        var div = document.createElement("div");
+        div.className = "activityModel";
+        document.body.append(div);
+      }
+    }
+
+    // 显示方块
+    var show = function() {
+      var divs = document.getElementsByClassName("activityModel");
+      for (var j = 0; j < divs.length; j++) {
+        divs[j].style.top = (shape[j * 2 + 1] + y) * size + "px";
+        divs[j].style.left = (shape[j * 2] + x) * size + "px";
+      }
+    }
+
+    // 旋转方块
+    var rotate = function() {
+      var newShape = [shape[1], 3 - shape[0], shape[3], 3 - shape[2], shape[5], 3 - shape[4], shape[7], 3 - shape[6]];
+      if (!check(x, y, newShape)) return;
+      shape = newShape;
+      show();
+    }
+
+    // 移动方块
+    var move = function(a, b) {
+      if (check(x + a, y + b, shape)) {
+        x += a;
+        y += b
+        show();
+      } else {
+        if (b == 0) return;
+        fix();
+        create();
+        show();
+        clearInterval(intervalId2);
+      }
+    }
+
+    // 快速下落
+    var quickDown = function() {
+      intervalId2 = setInterval("move(0, 1)", 0);
+    }
+
+    // 固定方块，变成灰色
+    var fix = function() {
+      var divs = document.getElementsByClassName("activityModel");
+      for (var i = divs.length - 1; i >= 0; i--) {
+        divs[i].className = "stationaryModel";
+      }
+      x = 3;
+      y = 0;
+    }
+
+    // 越界检查
+    var check = function(x, y, shape) {
+      var most_left = colCount;
+      var most_right = 0;
+      var most_top = rowCount;
+      var most_bottom = 0;
+
+      for (var i = 0; i < 8; i += 2) {
+        // 记录最左边水平坐标
+        if (shape[i] < most_left)
+          most_left = shape[i];
+        // 记录最右边水平坐标
+        if (shape[i] > most_right)
+          most_right = shape[i];
+        // 记录最上边垂直坐标
+        if (shape[i + 1] < most_top)
+          most_top = shape[i + 1];
+        // 记录最下边垂直坐标
+        if (shape[i + 1] > most_bottom)
+          most_bottom = shape[i + 1];
+      }
+
+      if ((most_right + x + 1) > colCount || (most_left + x) < 0 ||
+        (most_bottom + y + 1) > rowCount || (most_top + y) < 0)
+        return false;
+
+      return true;
+    }
+
+  </script>
+</head>
+<body onload="init()">
+    <div class="container"></div>
+</body>
+</html>

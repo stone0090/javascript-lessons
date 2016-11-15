@@ -41,7 +41,7 @@
         // 检查是电脑登录还是手机登录的
         function isFromMobile() {
             // var userAgentKeywords=new Array("Android", "iPhoFne" ,"SymbianOS", "Windows Phone", "iPad", "iPod", "MQQBrowser");
-            // exclude ms-os and mac-os 
+            // exclude ms-os and mac-os
             var flag;
             var userAgentInfo = navigator.userAgent;
             if (userAgentInfo.indexOf("Windows NT") == -1)
@@ -56,7 +56,7 @@
             var myCss = css ? css : "activityModel";
             this.divs = [createElm("div", myCss), createElm("div", myCss), createElm("div", myCss), createElm("div", myCss)];
             if (!shape) {
-                // 初始化计分栏 
+                // 初始化计分栏
                 this.score = createElm("div", "score");
                 this.score.style.top = "0px";
                 this.score.style.left = 6 * size + "px";
@@ -224,8 +224,6 @@
                     anDiv.innerHTML = "玩法说明：<br/>瞬落：'空格'<br/>暂停：'回车'<br/>暂停：'点击方块'<br/>旋转：'上方向键'";
                 }
 
-                // 加入作者信息
-                anDiv.innerHTML = anDiv.innerHTML + '<br/><br/>作者：stone<br/>微博：<a href="http://weibo.com/605494869">weibo.com/605494869</a>';
                 // 清空积分
                 this.score = 0;
             }
