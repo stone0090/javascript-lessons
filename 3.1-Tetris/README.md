@@ -4,9 +4,8 @@
 
 接下来我们即将进入「紧张、刺激、好玩」的实践部分，我会引导大家结合 JavaScript 理论基础来完成一些有趣的功能和效果。
 
-此次我们的主题是，**带你用 JavaScript 开发「俄罗斯方块」小游戏**。这是我在2012年刚转 Web 开发时，写过的第一段 JavaScript 代码。当时也是参考别人的博客照着写的，写的时候发现自己明明「看懂了，却写不出来」，多次回顾的源码之后才勉强完成。原文地址：[`http://t.cn/zORubdi`](http://blog.csdn.net/shi0090/article/details/7390105)，演示地址：[`http://t.cn/RfUusy0`](http://shijiajie.com/other/javascript-game/tetris)。
+此次我们的主题是，**带你用 JavaScript 开发「俄罗斯方块」小游戏**。这是我在2012年刚转 Web 开发时写的第一段 JavaScript 代码。当时也是照着人家的代码写，可总是出现「明明看懂了，却写不出来」的情况。所以实践部分，大家一定要跟着我写代码，只有「看懂了，并且写得出来」，这个知识你才是真正掌握了（当时的源码可以在文章 [Javascript俄罗斯方块 `http://t.cn/zORubdi`](http://blog.csdn.net/shi0090/article/details/7390105) 中找到）。
 
-所以实践部分，大家一定要跟着我写代码，只有「看懂了，并且写得出来」，这个知识你才真正掌握了。
 
 > 此次的实践，大家最好能具备「熟悉 HTML / CSS / JavaScript」的能力，如果火候稍有欠缺也没关系，在学习过程中随时在 [菜鸟教程`http://www.runoob.com`](http://www.runoob.com/) 查阅相关资料也能跟上，只是进度会稍慢一些。
 
@@ -92,5 +91,4 @@
 
 ## 更多
 
-> 关注微信公众号「劼哥舍」，老斯基带你飞。
-> 关注 [https://github.com/stone0090/javascript-lessons](https://github.com/stone0090/javascript-lessons)，获取最新动态。
+> 关注 微信公众号[`劼哥舍`](http://qiniu.shijiajie.com/weixin/qrcode_for_gh_48ef95800cf5_258.jpg) 或者 Star [`http://t.cn/RceiUDt`](https://github.com/stone0090/javascript-lessons)，获取本课程最新动态。

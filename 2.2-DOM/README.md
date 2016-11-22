@@ -247,7 +247,7 @@ var doctype = document.doctype;     // 取得对<!DOCTYPE>的引用
 
 作为 `HTMLDocument` 的一个实例，`document` 对象还有一些标准的 `Document` 对象所没有的属性。这些属性提供了 `document` 对象所表现的网页的一些信息。其中第一个属性就是 `title`，包含着 `<title>` 元素中的文本——显示在浏览器窗口的标题栏或标签页上。通过这个属性可以取得当前页面的标题，也可以修改当前页面的标题并反映在浏览器的标题栏中。
 
-```
+```javascript
 // 取得文档标题
 var originalTitle = document.title;
 
@@ -257,7 +257,7 @@ document.title = "New page title";
 
 接下来要介绍的3个属性都与对网页的请求有关，它们是 `URL`、`domain` 和 `referrer`。`URL` 属性中包含页面完整的 URL（即地址栏中显示的URL），`domain` 属性中只包含页面的域名，而 `referrer` 属性中则保存着链接到当前页面的那个页面的 URL。在没有来源页面的情况下，`referrer` 属性中可能会包含空字符串。所有这些信息都存在于请求的 HTTP 头部，只不过是通过这些属性让我们能够在 JavaScrip 中访问它们而已，如下面的例子所示。
 
-```
+```javascript
 // 取得完整的URL
 var url = document.URL;
 
