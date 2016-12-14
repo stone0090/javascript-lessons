@@ -10,7 +10,7 @@
 
 在代码中任何地方都能访问到的对象拥有全局作用域，一般来说以下三种情形拥有全局作用域：
 
-1. 最外层函数和在最外层函数外面定义的变量拥有全局作用域，例如：
+1.最外层函数和在最外层函数外面定义的变量拥有全局作用域，例如：
 
 ```javascript
 var global = "global";     // 显式声明一个全局变量
@@ -18,13 +18,13 @@ function checkscope() {
     var local = "local";   // 显式声明一个局部变量
     return global;         // 返回全局变量的值
 }
-console.log(scope);        // "global"
+console.log(global);       // "global"
 console.log(checkscope()); // "global"
 console.log(local);        // error: local is not defined.
 ```
 上面代码中，`global` 是全局变量，不管是在 `checkscope()` 函数内部还是外部，都能访问到全局变量 `global`。
 
-2. 所有末定义直接赋值的变量自动声明为拥有全局作用域，例如：
+2.所有末定义直接赋值的变量自动声明为拥有全局作用域，例如：
 
 ```javascript
 function checkscope() {
@@ -36,7 +36,7 @@ console.log(local);      // error: local is not defined.
 ```
 上面代码中，变量 `global` 未用 `var` 关键字定义就直接赋值，所以隐式的创建了全局变量 `global`，但这种写法容易造成误解，应尽量避免这种写法。
 
-3. 所有 `window` 对象的属性拥有全局作用域
+3.所有 `window` 对象的属性拥有全局作用域
 
 一般情况下，`window` 对象的内置属性都拥有全局作用域，例如 `window.name`、`window.location`、`window.top` 等等。
 
