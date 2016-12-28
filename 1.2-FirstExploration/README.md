@@ -23,7 +23,7 @@
 </script>
 ```
 
-> 在 HTML5 规范中，`<script>` 的 `type` 属性默认是 `"text/javascript"`，所以可以省略；但是在 HTML 4.01 和 XHTML 1.0 规范中，`type` 属性是必须的。可以参考 Stack Overflow 上的回答：http://stackoverflow.com/questions/4243577/which-is-better-script-type-text-javascript-script-or-script-scr
+> 在 HTML5 规范中，`<script>` 的 `type` 属性默认是 `"text/javascript"`，所以可以省略；但是在 HTML 4.01 和 XHTML 1.0 规范中，`type` 属性是必须的。可以参考 Stack Overflow 上的回答：[http://stackoverflow.com/questions/4243577/which-is-better-script-type-text-javascript-script-or-script-scr](http://stackoverflow.com/questions/4243577/which-is-better-script-type-text-javascript-script-or-script-scr)
 
 如果要通过 `<script>` 元素来包含外部 JavaScript 文件，那么 src 属性就是必需的。这个属性的值是一个指向外部 JavaScript 文件的链接，例如：
 
@@ -100,7 +100,7 @@
 - 挑战一：实现打开页面就能看到网页内容「本页面用来测试 `<script>` 加载顺序~」，不必等外部 JavaScript 文件全部下载完毕才显示。 
 - 挑战二：实现在外部 JavaScript 文件下载之前「开启页面加载效果」，外部 JavaScript 文件全部下载完毕之后「关闭页面加载效果」。
 
-最终效果可参考 http://shijiajie.com/other/javascript-lesson/1.2
+最终效果可参考：[http://shijiajie.com/other/javascript-lesson/1.2](http://shijiajie.com/other/javascript-lesson/1.2)
 
 ``` html
 <!DOCTYPE html>

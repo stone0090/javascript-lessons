@@ -72,7 +72,7 @@ Netscape Communicator 团队提出的另一种事件流叫做**事件捕获**（
 
 在 HTML 中定义的事件处理程序可以包含要执行的具体动作，也可以调用在页面其他地方定义的脚本，如下面的例子所示：
 
-```javascript
+```html
 <script type="text/javascript">
     function showMessage(){
         console.log("Hello world!");

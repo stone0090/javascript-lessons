@@ -55,7 +55,7 @@ Web 浏览器只是 ECMAScript 实现的宿主环境之一，其他宿主环境�
 > 2015年6月，ECMAScript 6 正式通过，成为国际标准。
 
 > 扩展阅读「[阮一峰](http://www.ruanyifeng.com/home.html) 的《ECMAScript 6 入门》」  
-> http://es6.ruanyifeng.com/#docs/intro
+> [http://es6.ruanyifeng.com/#docs/intro](http://es6.ruanyifeng.com/#docs/intro)
 
 3.0版是一个巨大的成功，在业界得到广泛支持，成为通行标准，奠定了 JavaScript 语言的基本语法，以后的版本完全继承。直到今天，初学者一开始学习 JavaScript，其实就是在学3.0版的语法。
 
@@ -122,10 +122,10 @@ JavaScript 是一种专为网页交互而设计的脚本语言，由下列3个�
 JavaScript 的这3个组成部分，在当前5个主要浏览器（IE、FireFox、Chrome、Safari 和 Opera）中都得到了不同程度的支持。其中，所有浏览器对 ECMAScript 3 版本的支持大体上都还不错，而对 ECMAScript 5 的支持程度越来越高，但对 DOM 的支持则彼此相差比较多。对于已经正式纳入 HTML5 标准的 BOM 来说，尽管各浏览器都实现了某些众所周知的共同特性，但其他特性还是会因浏览器而异。
 
 > 扩展阅读「Standard ECMA-262 5.1 Edition 」  
-> http://www.ecma-international.org/ecma-262/5.1/
+> [http://www.ecma-international.org/ecma-262/5.1/](http://www.ecma-international.org/ecma-262/5.1/)
 
 > 扩展阅读「ECMAScript 5 浏览器兼容一览表」  
-> http://caniuse.mojijs.com/Home/Html/item/key/es5/index.html
+> [http://caniuse.mojijs.com/Home/Html/item/key/es5/index.html](http://caniuse.mojijs.com/Home/Html/item/key/es5/index.html)
 
 ## 更多
 

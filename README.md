@@ -1,4 +1,4 @@
-# 《JavaScript 闯关记》-- by stone
+# 《JavaScript 闯关记》
 
 ## 为何写作此课程
 [stone](http://shijiajie.com/about/)  主要负责基于 Web 的企业内部管理系统的开发，虽然能够熟练地使用 JavaScript，但随着对 JavaScript 的理解越来越深，才发现自己尚未掌握其精髓。
@@ -37,7 +37,7 @@
 
 ### 实践
 - [过五关斩六将 - 带你用 JavaScript 开发「俄罗斯方块」小游戏](https://github.com/stone0090/javascript-lessons/tree/master/3.1-Tetris)（已完成）
-- 俄罗斯方块游戏（vue版）
+- 俄罗斯方块游戏（vue版）（编写中...）
 - 手写zepto.js
 - 过场动画效果
 - 表单验证插件
@@ -48,28 +48,29 @@
 本课程内容主要基于以下书籍整理，如需了解更多细节，可自行查阅原著。
 
 > 《编写可维护的 JavaScript》  
-> https://book.douban.com/subject/21792530
+> [https://book.douban.com/subject/21792530](https://book.douban.com/subject/21792530)
 
 > 《JavaScript 语言精粹》  
-> https://book.douban.com/subject/3590768
+> [https://book.douban.com/subject/3590768](https://book.douban.com/subject/3590768)
 
 > 《JavaScript DOM 编程艺术》  
-> https://book.douban.com/subject/6038371
+> [https://book.douban.com/subject/6038371](https://book.douban.com/subject/6038371)
 
 > 《JavaScript 权威指南(第6版)》  
-> https://book.douban.com/subject/10549733
+> [https://book.douban.com/subject/10549733](https://book.douban.com/subject/10549733)
 
 > 《JavaScript 高级程序设计(第3版)》  
-> https://book.douban.com/subject/10546125
+> [https://book.douban.com/subject/10546125](https://book.douban.com/subject/10546125)
 
 ## 勘误及提问
 如果您在学习本课程时发现错误，或者想提关于本课程的技术问题，可以通过以下方式联系我。
 
-> 微信公众号：劼哥舍  
-> Email：stone0090@hotmail.com  
-> 微博：http://weibo.com/stone0090  
+> 微信公众号：[劼哥舍](http://qiniu.shijiajie.com/weixin/qrcode_for_gh_48ef95800cf5_430.jpg)   
+> 邮件：[stone0090@hotmail.com](stone0090@hotmail.com)  
+> 微博：[http://weibo.com/stone0090](http://weibo.com/stone0090)  
+> GitHub：[https://github.com/stone0090](https://github.com/stone0090/javascript-lessons)
 
-您还可以在 [GitHub](https://github.com/) 上 [Star](https://github.com/stone0090/javascript-lessons) 该课程，获取最新内容。  
+## 更多
 
-> https://github.com/stone0090/javascript-lessons
-
+> 关注微信公众号「劼哥舍」回复「答案」，获取关卡详解。  
+> 关注 [https://github.com/stone0090/javascript-lessons](https://github.com/stone0090/javascript-lessons)，获取最新动态。
