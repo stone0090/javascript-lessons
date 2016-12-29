@@ -45,7 +45,7 @@ function addSomeNumber(num){
     return num + 100;
 }
 
-function addSomeNumber(num) {
+function addSomeNumber(num, num2) {
     return num + 200;
 }
 
@@ -59,7 +59,7 @@ var addSomeNumber = function (num){
     return num + 100;
 };
 
-addSomeNumber = function (num) {
+addSomeNumber = function (num, num2) {
     return num + 200;
 };
 
