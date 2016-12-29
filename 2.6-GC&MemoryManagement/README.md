@@ -10,7 +10,7 @@ JavaScript 具有自动垃圾收集机制（GC：Garbage Collecation），也就
 
 ### 内存的分配场景
 
-``` javascript
+```javascript
 // 1.对象
 new Object(); 
 new MyConstructor(); 
@@ -18,25 +18,25 @@ new MyConstructor();
 Object.create(); 
 ```
 
-``` javascript
+```javascript
 // 2.数组 
 new Array(); 
 [ 1, 2, 3, 4 ]; 
 ```
 
-``` javascript
+```javascript
 // 3.字符串，JavaScript 的字符串和 .NET 一样，使用资源池和 copy on write 方式管理字符串。
 new String("hello hyddd"); 
 "<p>" + e.innerHTML + "</p>" 
 ```
 
-``` javascript
+```javascript
 // 4.函数
 var x = function () { ... } 
 new Function(code); 
 ```
 
-``` javascript
+```javascript
 // 5.闭包 
 function outer(name) {
      var x = name; 
@@ -49,6 +49,7 @@ function outer(name) {
 ### 内存的生命周期
 
 下面我们来分析一下函数中局部变量的正常生命周期。
+
 - 内存分配：局部变量只在函数执行的过程中存在。而在这个过程中，会为局部变量在栈（或堆）内存上分配相应的空间，以便存储它们的值。
 - 内存使用：然后在函数中使用这些变量，直至函数执行结束。
 - 内存回收：此时，局部变量就没有存在的必要了，因此可以释放它们的内存以供将来使用。
@@ -59,7 +60,7 @@ function outer(name) {
 
 JavaScript 中最常用的垃圾收集方式是 **标记清除**（mark-and-sweep）。当变量进入环境（例如，在函数中声明一个变量）时，就将这个变量标记为“进入环境”。从逻辑上讲，永远不能释放进入环境的变量所占用的内存，因为只要执行流进入相应的环境，就可能会用到它们。而当变量离开环境时，则将其标记为“离开环境”。
 
-``` javascript
+```javascript
 function test(){ 
     var a = 10 ; // 被标记 ，进入环境 
     var b = 20 ; // 被标记 ，进入环境 
@@ -77,7 +78,7 @@ test(); // 执行完毕 之后 a、b又被标离开环境，被回收。
 
 另一种不太常见的垃圾收集策略叫做 **引用计数**（reference counting）。引用计数的含义是跟踪记录每个值被引用的次数。当声明了一个变量并将一个引用类型值赋给该变量时，则这个值的引用次数就是1。如果同一个值又被赋给另一个变量，则该值的引用次数加1。相反，如果包含对这个值引用的变量又取得了另外一个值，则这个值的引用次数减1。当这个值的引用次数变成0时，则说明没有办法再访问这个值了，因而就可以将其占用的内存空间回收回来。这样，当垃圾收集器下次再运行时，它就会释放那些引用次数为零的值所占用的内存。
 
-``` javascript
+```javascript
 function test(){ 
     var a = {} ; // a的引用次数为0 
     var b = a ; // a的引用次数加1，为1 
@@ -88,7 +89,7 @@ function test(){
 
 早期很多浏览器使用引用计数策略，但很快它就遇到了一个严重的问题：**循环引用**。循环引用指的是对象 A 中包含一个指向对象 B 的指针，而对象 B 中也包含一个指向对象 A 的引用。请看下面这个例子：
 
-``` javascript
+```javascript
 function problem(){
     var objectA = new Object();
     var objectB = new Object();
@@ -101,7 +102,7 @@ function problem(){
 
 我们知道，IE 中有一部分对象并不是原生 JavaScript 对象。例如，其 BOM 和 DOM 中的对象就是使用 C++ 以 COM（Component Object Model，组件对象模型）对象的形式实现的，而 COM 对象的垃圾收集机制采用的就是引用计数策略。因此，即使 IE 的 JavaScript 引擎是使用标记清除策略来实现的，但 JavaScript 访问的 COM 对象依然是基于引用计数策略的。换句话说，只要在 IE 中涉及 COM 对象，就会存在循环引用的问题。下面这个简单的例子，展示了使用 COM 对象导致的循环引用问题：
 
-``` javascript
+```javascript
 var element = document.getElementById("some_element");
 var myObject = new Object();
 myObject.element = element;
@@ -112,7 +113,7 @@ element.someObject = myObject;
 
 为了避免类似这样的循环引用问题，最好是在不使用它们的时候手工断开原生 JavaScript 对象与 DOM 元素之间的连接。例如，可以使用下面的代码消除前面例子创建的循环引用：
 
-``` javascript
+```javascript
 myObject.element = null;
 element.someObject = null;
 ```
@@ -133,7 +134,7 @@ IE6 的垃圾回收是根据内存分配量运行的，当环境中存在256个�
 
 因此，确保占用最少的内存可以让页面获得更好的性能。而优化内存占用的最佳方式，就是为执行中的代码只保存必要的数据。一旦数据不再有用，最好通过将其值设置为 `null` 来释放其引用——这个做法叫做 **解除引用**（dereferencing）。这一做法适用于大多数全局变量和全局对象的属性。局部变量会在它们离开执行环境时自动被解除引用，如下面这个例子所示：
 
-``` javascript
+```javascript
 function createPerson(name){
     var localPerson = new Object();
     localPerson.name = name;
@@ -158,13 +159,13 @@ David 大叔主要介绍了2个优化方案，而这也是最主要的2个优化
 
 ### 分代回收（Generation GC） 
 
-这个和 Java 回收策略思想是一致的。目的是通过区分「临时」与「持久」对象；多回收「临时对象区」（young generation），少回收「持久对象区」（tenured generation），减少每次需遍历的对象，从而减少每次GC的耗时。**Chrome 浏览器所使用的 V8 引擎就是采用的该优化策略。**如图： 
+这个和 Java 回收策略思想是一致的。目的是通过区分「临时」与「持久」对象；多回收「临时对象区」（young generation），少回收「持久对象区」（tenured generation），减少每次需遍历的对象，从而减少每次GC的耗时。**Chrome 浏览器所使用的 V8 引擎就是采用的分代回收策略。**如图： 
 
 ![](http://qiniu.shijiajie.com/blog/javascript-lesson/2.6-GC&MemoryManagement/WechatIMG124.jpg)
 
 ### 增量回收（Incremental GC）
 
-这个方案的思想很简单，就是「每次处理一点，下次再处理一点，如此类推」。这种方案，虽然耗时短，但中断较多，带来了上下文切换频繁的问题。如图： 
+这个方案的思想很简单，就是「每次处理一点，下次再处理一点，如此类推」。这种方案，虽然耗时短，但中断较多，带来了上下文切换频繁的问题。**Firefox 浏览器所使用的  JavaScript 引擎就是采用的增量回收策略。**如图： 
 
 ![](http://qiniu.shijiajie.com/blog/javascript-lesson/2.6-GC&MemoryManagement/WechatIMG125.jpg)
 
@@ -180,8 +181,9 @@ David 大叔主要介绍了2个优化方案，而这也是最主要的2个优化
 3. 设置完成后，点击最左边的 `Record` 按钮，然后就可以访问网页了。
 4. 打开一个网站，例如：[http://www.taobao.com](http://www.taobao.com)，当网页加载完成后，点击 `Stop`，等待分析结果。
 5. 然后在 `Chart View` 上寻找内存急速下降的部分，查看对应的 `Event Log`，可以从中找到 GC 的日志。
+
 具体过程如下图所示：
-![](http://qiniu.shijiajie.com/blog/javascript-lesson/2.6-GC&MemoryManagement/WechatIMG126.jpg)
+![](http://qiniu.shijiajie.com/blog/javascript-lesson/2.6-GC&MemoryManagement/WechatIMG127.jpg)
 
 ## 关卡
 
