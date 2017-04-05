@@ -608,7 +608,7 @@ console.log('Value is ' + (val === 'smtg') ? 'Something' : 'Nothing');  // ???
 ```
 
 ``` javascript
-// 挑战九
+// 挑战十
 console.log(1 + - + + + - + 1);
 ```
 
