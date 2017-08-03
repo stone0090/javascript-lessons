@@ -21,7 +21,7 @@
 </body>
 <script> 
     var d = document.getElementById("t");  
-    document.writeln(d.childNodes[1].innerHTML); // aaa
+    document.writeln(d.childNodes[1].innerHTML); // bbb
     document.writeln(d.parentNode.getAttribute("name")); // ddd
 </script>
 ```
