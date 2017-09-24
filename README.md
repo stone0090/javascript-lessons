@@ -1,5 +1,7 @@
 # 《JavaScript 闯关记》
 
+2017年9月24号更新：《JavaScript闯关记》视频版已经在极客学院上线啦，你只需花一张电影票的钱（29元），就可以观赏总时长3小时12分的 JavaScript 大片，真的不要太划算哦。详情可参见[《JavaScript闯关记》视频版硬广](https://mp.weixin.qq.com/s?__biz=MzIyNjE0MzU1OQ==&amp;mid=2650101235&amp;idx=1&amp;sn=9c4e6b8305bc0ff824a9ad71b4769a5d&amp;chksm=f07509dbc70280cdc71faa9b24dfb7a27ac11fed8d5df07402771f5c041f91f16f83ac93aa5d#rd)。
+
 ## 为何写作此课程
 [stone](http://shijiajie.com/about/)  主要负责基于 Web 的企业内部管理系统的开发，虽然能够熟练地使用 JavaScript，但随着对 JavaScript 的理解越来越深，才发现自己尚未掌握其精髓。
 
